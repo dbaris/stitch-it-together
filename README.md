@@ -1,1 +1,1 @@
-# stitch-it-together
+# Stitch It Together
