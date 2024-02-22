@@ -6,6 +6,24 @@ body {
   font: 14px "Gelica", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  color: #ff00ff;
+}
+
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00ff;
+}
+
+select {
+  background-color:rgb(76, 76, 76);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  font-family: "Gelica", Helvetica, Arial, sans-serif;
 }
