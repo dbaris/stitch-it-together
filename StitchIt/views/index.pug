@@ -2,7 +2,12 @@ extends layout
 
 block content
   h1 #{title}
-  h2 Fraying Borders, Weaving Connections
-  p 
-    | Welcome to #{title}, a series of multiscalar, 
-    | interactive maps engaging the US-Mexico border region.
+  //- p 
+  //-   | Welcome to #{title}, a series of multiscalar, 
+  //-   | interactive maps engaging the US-Mexico border region.
+
+  canvas(id='test_map')
+
+  //- div(id='projection1')
+  //- div(id='projection2')
+  //- canvas(id='global_projections')
