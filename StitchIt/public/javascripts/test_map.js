@@ -2,14 +2,13 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 // import * as d3_geo from "https://cdn.jsdelivr.net/npm/d3-geo@3";
 // import * as d3_geo_projection from "https://cdn.jsdelivr.net/npm/d3-geo-projection@4"
-import {geoPolyhedralWaterman} from "https://cdn.skypack.dev/d3-geo-projection@4";
+import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
 
 const outline = ({type: "Sphere"});
 const graticule = d3.geoGraticule10();
 var width = 900;
-// console.log(d3_geo_projection);
-const projectionSelect = geoPolyhedralWaterman();
+const projectionSelect = d3_geo_projection.geoPolyhedralWaterman();
 // const projectionSelect = d3.geoMercator();
 
 var height = fitWidth(projectionSelect);

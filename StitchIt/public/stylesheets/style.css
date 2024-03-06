@@ -1,8 +1,12 @@
+html {
+  padding: none;
+}
+
 body {
   /* background: black; */
   /* color: white; */
   text-align: center;
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Gelica", Helvetica, Arial, sans-serif;
 }
 
@@ -22,8 +26,43 @@ a:hover {
 select {
   background-color:rgb(76, 76, 76);
   border: none;
-  border-radius: 25px;
+  /* border-radius: 25px; */
+  padding: 5px;
   color: white;
   text-align: center;
   font-family: "Gelica", Helvetica, Arial, sans-serif;
+}
+
+input {
+  background-color:rgb(76, 76, 76);
+  border: none;
+  /* border-radius: 25px; */
+  padding: 6px;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.projection-input {
+  /* background-color: rgb(158, 158, 158); */
+  width: 30vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  /* border-radius: 25px; */
+}
+
+#map-projections {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  width: 100%;
+}
+
+canvas {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block
 }

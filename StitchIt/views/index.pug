@@ -6,8 +6,12 @@ block content
   //-   | Welcome to #{title}, a series of multiscalar, 
   //-   | interactive maps engaging the US-Mexico border region.
 
-  canvas(id='test_map')
+  div(id='map-projections')
+    h2 Map Projections
+    div(id='projection1' class='projection-input')
+    div(id='projection2' class='projection-input')
+    canvas(id='global-projections-canvas')
 
-  //- div(id='projection1')
-  //- div(id='projection2')
-  //- canvas(id='global_projections')
+  canvas(id='test_map')
+  canvas(id='us_mexico')
+
