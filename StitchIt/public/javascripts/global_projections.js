@@ -179,7 +179,7 @@ function drawMap() {
       const context = canvas.getContext("2d");
       context.canvas.width  = width;
       context.canvas.height = height;
-      context.fillStyle = "#fff";
+      context.fillStyle = "#aaadca";
       context.fillRect(0, 0, width, height);
 
       context.save();
