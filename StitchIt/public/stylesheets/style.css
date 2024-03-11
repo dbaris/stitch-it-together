@@ -3,11 +3,11 @@ html {
 }
 
 body {
-  background: #b6c59b;
-  /* color: white; */
+  color: #658c5d;
   text-align: center;
   /* padding: 50px; */
-  font: 14px "Gelica", Helvetica, Arial, sans-serif;
+  
+  font: 14px "Elza", Helvetica, Arial, sans-serif;
 }
 
 footer {
@@ -15,11 +15,14 @@ footer {
 }
 
 h1 {
-  color: #2c3387;
+  font-family: "Gelica",'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: rgb(255,0,255);
 }
 
 h2 {
   color: #2c3387;
+  font-family: "Gelica", 'Times New Roman', Times, serif;
 }
 
 a {
@@ -44,41 +47,39 @@ a:hover {
 }
 
 select {
-  /* background-color:rgb(76, 76, 76); */
   background-color: white;
   border-radius: 5px;
-  color: black;
-  border: none;
-  /* border-radius: 25px; */
+  color: #658c5d;
+  border: 1px solid #658c5d;
   padding: 5px;
   text-align: center;
-  font-family: "Gelica", Helvetica, Arial, sans-serif;
+  font-family: "Elza Light", Helvetica, Arial, sans-serif;
 }
 
 input {
-  background-color:rgb(76, 76, 76);
-  border: none;
-  /* border-radius: 25px; */
+  background-color: white;
+  border-radius: 5px;
+  color: #658c5d;
+  border: 1px solid #658c5d;
+  width: 5vw;
   padding: 6px;
   margin-left: 100px;
   margin-right: 10px;
 }
 
 .projection-input {
-  /* background-color: rgb(158, 158, 158); */
   width: 30vw;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  /* border-radius: 25px; */
 }
 
 #map-projections {
   padding-top: 5vh;
   padding-bottom: 5vh;
   width: 100%;
-  background-color: #aaadca;
+  background-color: #ffffff;
 }
 
 #map-projection-text {
