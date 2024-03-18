@@ -102,18 +102,24 @@ var projections = [
 ];
 
 class Projection {
-  constructor(color, name, id_tag, projection) {
+  constructor(color, name, id_tag, projection, callback) {
     this.color = color;
     this.name = name;
     this.id_tag = id_tag;
     this.projection = projection();
     this.form_id_tag = id_tag + 'form';
     this.color_id_tag = id_tag + 'color';
-
+    this.line_dash = [0,0];
+    this.callback = callback;
     this.generateForm();
   }
 
+  setLineDash(dash){
+    this.line_dash = dash;
+  }
+
   generateForm() {
+    console.log(this.color);
     const form = 
     `<form>
       <select id=${this.form_id_tag}>${projections.map(p => {
@@ -134,7 +140,7 @@ class Projection {
 
     var color = document.getElementById(this.color_id_tag);
     this.color = color.value;
-    drawMap();
+    this.callback();
   }
 }
 

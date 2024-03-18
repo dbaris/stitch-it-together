@@ -1,11 +1,11 @@
+// import * as d3 from "https://cdn.skypack.dev/d3@7";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
-import {projections, Projection} from "./projection.js";
+import {Projection} from "./projection.js";
 
-
-var p1 = new Projection('#ff0000', "orthographic", 'projection1', d3.geoOrthographic);
-var p2 = new Projection('#d00df2', "Mercator", 'projection2', d3.geoMercator);
+var p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic, drawMap);
+var p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator, drawMap);
 
 const outline = ({type: "Sphere"});
 const graticule = d3.geoGraticule10();
@@ -64,7 +64,7 @@ function drawMap() {
 
     context.save();
     context.globalCompositeOperation = "multiply";
-    // context.translate(0, (height - 2) / 2);
+    context.translate(0, (height - height2) / 2);
     render(p2.projection, p2.color);
     context.restore();
     });

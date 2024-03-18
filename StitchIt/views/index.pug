@@ -3,7 +3,8 @@ extends layout
 block content
   div(id='title')
     div(id='title-text')
-      h1 #{title}: CounterMapping
+      h1 #{title}
+      h1 CounterMapping
 
   div(id='map-projections')
     div(id='map-projection-text')
@@ -28,8 +29,8 @@ block content
         | Use this map to overlay different projection algorithms. Overlay different colors. Flip global north & south. 
         | Consider what each map prioritizes and why. 
 
-    div(id='projection1' class='projection-input')
-    div(id='projection2' class='projection-input')
+    div(id='global-projection1' class='projection-input')
+    div(id='global-projection2' class='projection-input')
     canvas(id='global-projections-canvas')
 
   div(id='migration')
