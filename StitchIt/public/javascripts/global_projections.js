@@ -10,7 +10,7 @@ var p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMerca
 const outline = ({type: "Sphere"});
 const graticule = d3.geoGraticule10();
 
-var width = 900;
+var width = window.screen.width * .4;
 var height1 = fitWidth(p1.projection);
 var height2 = fitWidth(p2.projection);
 var height = Math.max(height1, height2);

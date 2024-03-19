@@ -43,8 +43,7 @@ function drawMap() {
                 }
             };
             resize();
-            console.log(height);
-
+            
             const canvas = document.getElementById('migration-canvas');
             const context = canvas.getContext("2d");
             context.canvas.width  = width;

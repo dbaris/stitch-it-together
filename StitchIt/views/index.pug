@@ -1,38 +1,50 @@
 extends layout
 
 block content
-  div(id='title')
-    div(id='title-text')
-      h1 #{title}
-      h1 CounterMapping
+  div(class='outer')
+    div(id='title')
+      div(id='title-text')
+        h1 #{title}: CounterMapping
+        div()
+          h2(class='page-link' id='global-projections-link') 1
+        div()
+          h2(class='page-link' id='migration-link') 2
+        div()
+          h2(class='page-link' id='infrastructure-link') 3
+    div(id='source-code')
+      a(href='https://github.com/dbaris/stitch-it-together') Source Code
 
-  div(id='map-projections')
-    div(id='map-projection-text')
-      h2 Map Projections
-      p 
-        | Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. 
-        | However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are 
-        | not neutral decisions and neither are the images that they produce. In this way, maps can be understood as 
-        | narrative tools that generate a particular reality, a particular truth.
+    div(class='container' id='map-projections')
+      div(id='map-projection-text')
+        h2 Map Projections
+        p 
+          | Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. 
+          | However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are 
+          | not neutral decisions and neither are the images that they produce. In this way, maps can be understood as 
+          | narrative tools that generate a particular reality, a particular truth.
 
-      p 
-        | Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-
-        | dimensional points to a two-dimensional representation, with different algorithms producing different 
-        | representations. While some projections maintain geographic scale, others produce size distortions that 
-        | dramatically under-scale some nations while enlarging others. For example, the Mercator projection, developed 
-        | in 1569, is a rectangular projection where the distortion at each pole is so severe that the actual pole itself
-        | cannot be depicted. This makes Europe, the US, and Canada appear larger, while Africa and South America 
-        | appear much smaller. The Mercator projection has been the default map in American schools, teaching children
-        | at a distorted scale that reflects a Western worldview that de-prioritizes the global south. 
+        p 
+          | Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-
+          | dimensional points to a two-dimensional representation, with different algorithms producing different 
+          | representations. While some projections maintain geographic scale, others produce size distortions that 
+          | dramatically under-scale some nations while enlarging others. For example, the Mercator projection, developed 
+          | in 1569, is a rectangular projection where the distortion at each pole is so severe that the actual pole itself
+          | cannot be depicted. This makes Europe, the US, and Canada appear larger, while Africa and South America 
+          | appear much smaller. The Mercator projection has been the default map in American schools, teaching children
+          | at a distorted scale that reflects a Western worldview that de-prioritizes the global south. 
 
-      p 
-        | Use this map to overlay different projection algorithms. Overlay different colors. Flip global north & south. 
-        | Consider what each map prioritizes and why. 
+        p 
+          | Use this map to overlay different projection algorithms. Overlay different colors. Flip global north & south. 
+          | Consider what each map prioritizes and why. 
 
-    div(id='global-projection1' class='projection-input')
-    div(id='global-projection2' class='projection-input')
-    canvas(id='global-projections-canvas')
+        div(id='global-projection1' class='projection-input')
+        div(id='global-projection2' class='projection-input')
+      div(id='global-projections-canvas-container')
+        canvas(id='global-projections-canvas')
 
-  div(id='migration')
-    h2 Migration
-    canvas(id='migration-canvas')
+    div(id='migration' class='container')
+      h2 Migration
+      canvas(id='migration-canvas')
+
+    div(id='infrastructure' class='container')
+      h2 Infrastructure
