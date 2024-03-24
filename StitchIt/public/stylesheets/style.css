@@ -69,6 +69,10 @@ input {
   margin-right: 10px;
 }
 
+.sources {
+  text-align: left;
+}
+
 .container {
   position: absolute;
   width: 60vw;

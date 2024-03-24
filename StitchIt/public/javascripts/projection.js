@@ -1,7 +1,7 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 
-var projections = [
+var all_projections = [
     {name: "Airy’s minimum error", value: d3_geo_projection.geoAiry},
     {name: "Aitoff", value: d3_geo_projection.geoAitoff},
     {name: "American polyconic", value: d3_geo_projection.geoPolyconic},
@@ -36,7 +36,7 @@ var projections = [
     {name: "Eckert VI", value: d3_geo_projection.geoEckert6},
     {name: "Eisenlohr conformal", value: d3_geo_projection.geoEisenlohr},
     {name: "Equal Earth", value: d3.geoEqualEarth},
-    {name: "Equirectangular (plate carrée)", value: d3_geo_projection.geoEquirectangular},
+    {name: "Equirectangular (plate carrée)", value: d3.geoEquirectangular},
     {name: "Fahey pseudocylindrical", value: d3_geo_projection.geoFahey},
     {name: "flat-polar parabolic", value: d3_geo_projection.geoMtFlatPolarParabolic},
     {name: "flat-polar quartic", value: d3_geo_projection.geoMtFlatPolarQuartic},
@@ -101,12 +101,46 @@ var projections = [
     {name: "Winkel tripel", value: d3_geo_projection.geoWinkel3}
 ];
 
+var projections = [
+  {name: "Bonne", value: d3_geo_projection.geoBonne, description: "Developed in the early 16th century, \
+  the Bonne projection is an equal-area representation. Though the central meridian is a straight line, \
+  all other parallels become complex curves. Distortion grows moving away from the central parallels."},
+  // {name: "cylindrical equal-area", value: d3_geo_projection.geoCylindricalEqualArea, description: "cylindrical"},
+  // {name: "Equirectangular (plate carrée)", value: d3.geoEquirectangular, description: "equirectangular"},
+  {name: "Mercator", value: d3.geoMercator, description: "The Mercator projection was one of the earliest \
+  projections to be identifed on maps, first presented by Mercator in 1569. Longitude lines are equally spaced, \
+  while latitude lines grow in distance as they move towards each pole. The result is a distortion so severe that \
+  neither pole is actually visible on the map. This also makes Europe, the US, and Canada appear larger, while \
+  Africa and South America appear much smaller. The Mercator projection has been the default map in American \
+  schools, teaching children at a distorted scale that reflects a Westernized worldview."},
+  {name: "Miller cylindrical", value: d3_geo_projection.geoMiller, description: "The Miller Cylindrical projection \
+  was developed and presented in 1942 as a response to the severe distortions of the Mercator projection. It's a \
+  compromise on several projection types, so it's neither equal area, conformal, equidistant, or perspectival."},
+  {name: "Orthographic", value: d3.geoOrthographic, description: "One of the best known Azimuthal projections, \
+  the Orthographic projection was used as early as the ancient Greeks. Limited to only one hemisphere at a time, \
+  there is no distortion at the center, but it grows approaching the curved edge of the sphere. The Orthographic \
+  projection is one of the least useful projections for obtaining accurate measurements."},
+  // {name: "Stereographic", value: d3.geoStereographic, description: ""},
+
+];
+
+function getDescription(projection_name) {
+  var description = '';
+  projections.forEach(function(p) {
+    if (p['name'] == projection_name) {
+      description = p['description'];
+    }
+  })
+  return description;
+}
+
 class Projection {
   constructor(color, name, id_tag, projection, callback) {
     this.color = color;
     this.name = name;
     this.id_tag = id_tag;
     this.projection = projection();
+    this.description = this.getDescription(name);
     this.form_id_tag = id_tag + 'form';
     this.color_id_tag = id_tag + 'color';
     this.line_dash = [0,0];
@@ -118,15 +152,25 @@ class Projection {
     this.line_dash = dash;
   }
 
+  getDescription(projection_name) {
+    var description = '';
+    projections.forEach(function(p) {
+      if (p['name'] == projection_name) {
+        description = p['description'];
+      }
+    })
+    return description;
+  }
+
   generateForm() {
-    console.log(this.color);
     const form = 
     `<form>
       <select id=${this.form_id_tag}>${projections.map(p => {
           return `<option textContent=${p.name} ${(this.name == p.name) ? 'selected' : ''}> ${p.name} </option>`;
       })}</select>
       <form>
-      <input id=${this.color_id_tag} type="color" value="${this.color}"></input>`
+      <input id=${this.color_id_tag} type="color" value="${this.color}"></input>
+      <p>${this.description}</p>`
       ;
     document.getElementById(this.id_tag).innerHTML = form;
     document.getElementById(this.form_id_tag).addEventListener("change", (e) => this.updateProjection(e));
@@ -137,9 +181,11 @@ class Projection {
     var form = document.getElementById(this.form_id_tag);
     this.name = form.options[form.selectedIndex].text;
     this.projection = projections[form.selectedIndex].value();
-
+    this.description = this.getDescription(this.name);
     var color = document.getElementById(this.color_id_tag);
     this.color = color.value;
+    this.generateForm();
+
     this.callback();
   }
 }
