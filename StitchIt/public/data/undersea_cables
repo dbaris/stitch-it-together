@@ -1186,7 +1186,8 @@
           ]
         ],
         "type": "LineString"
-      }
+      },
+      "id": 14
     },
     {
       "type": "Feature",
@@ -1532,6 +1533,954 @@
         "type": "LineString"
       },
       "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "COGIM",
+        "RFS": 2005,
+        "length": 438,
+        "owners": "Telebec"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -64.33019471083315,
+            48.463776062035805
+          ],
+          [
+            -61.93351553735411,
+            47.356580827929974
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Honomoana",
+        "RFS": 2026,
+        "owners": "Google",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.37164571140427,
+            33.9249225183641
+          ],
+          [
+            -149.41657121579615,
+            -17.476034886268167
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Southern Cross NEXT",
+        "RFS": "2022 July",
+        "length": 13700,
+        "owners": "Southern Cross Cable Network",
+        "suppliers": "ASN"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -156.95684306013527,
+            2.117875262117934
+          ],
+          [
+            -118.3974981793639,
+            33.92123779615666
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hawaiki Nui",
+        "RFS": 2026,
+        "length": 25000,
+        "owners": "Hawaiki Submarine Cable LP"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.3976565391525,
+            33.93161599606418
+          ],
+          [
+            -155.55770159925376,
+            19.72395837497777
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tabua",
+        "RFS": 2026,
+        "owners": "Google",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.36185765129792,
+            33.93863100204416
+          ],
+          [
+            -160.09717058641073,
+            22.4130148186115
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SEA-US",
+        "RFS": "2017 August",
+        "length": 14500,
+        "owners": "GTA TeleGuam, Globe Telecom, Hawaiian Telecom, RTI, Telin",
+        "suppliers": "NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.39973331028338,
+            33.860706624946545
+          ],
+          [
+            -157.14665369766536,
+            21.260951447382993
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Asia Connect Cable-1",
+        "abbr": "ACC-1",
+        "RFS": 2027,
+        "length": 19000,
+        "owners": "Inligo Networks"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.33831023143523,
+            33.91436398549652
+          ],
+          [
+            -162.69375728227791,
+            24.96228701112777
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pacific Light Cable Network",
+        "abbr": "PLCN",
+        "RFS": "2022 January",
+        "length": 11806,
+        "owners": "Google, Meta",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.41838005141551,
+            33.91869639375632
+          ],
+          [
+            -125.52983644903078,
+            32.767225667684656
+          ],
+          [
+            -168.60048603704323,
+            38.15150015731243
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "JUPITER",
+        "RFS": 2020,
+        "length": 14557,
+        "owners": "Amazon Web Services, Meta, NTT< PCCW, PLDT, Softbank Corp",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.37469102618508,
+            33.95260129339913
+          ],
+          [
+            -125.38904684273808,
+            32.93384606639134
+          ],
+          [
+            -141.83611288403557,
+            35.3827154141419
+          ],
+          [
+            -123.95354684034825,
+            45.178405317687265
+          ],
+          [
+            -141.8284420599799,
+            35.390253193602476
+          ],
+          [
+            -168.01434191085713,
+            38.94635519037226
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unity",
+        "abbr": "EAC-Pacific",
+        "RFS": "2010 March",
+        "length": 9620,
+        "owners": "Bharti Airtel, Google, KDDI, Singtel, TIME dotCom, Telstra",
+        "suppliers": "NEC, SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.44432563202479,
+            33.952081763245076
+          ],
+          [
+            -125.40181714401109,
+            33.13099448071233
+          ],
+          [
+            -167.87661465381643,
+            39.750199952016686
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tata TGN-Pacific",
+        "RFS": "2002 December",
+        "length": 22300,
+        "owners": "Tata Communications",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -118.38675497803348,
+            33.97322088617631
+          ],
+          [
+            -125.34492096025664,
+            33.426744839022575
+          ],
+          [
+            -130.02737558019285,
+            38.595720689931085
+          ],
+          [
+            -130.34508954293258,
+            41.487422828135834
+          ],
+          [
+            -123.8653291723395,
+            45.18993918330253
+          ],
+          [
+            -130.4239469218755,
+            41.49219628064654
+          ],
+          [
+            -141.85882328147002,
+            35.193374988150154
+          ],
+          [
+            -168.31313830607198,
+            38.52320831017644
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zayo Festoon",
+        "RFS": 2015,
+        "owners": "Zayo",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -120.68921310030169,
+            35.24008390891916
+          ],
+          [
+            -121.04031223824416,
+            34.70353088512498
+          ],
+          [
+            -120.57447868945852,
+            34.291796425114825
+          ],
+          [
+            -119.6901440204716,
+            34.431119083742644
+          ],
+          [
+            -119.37278155933711,
+            33.950877994622985
+          ],
+          [
+            -118.37365074489819,
+            33.99567366640886
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 27
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Southern Cross Cable Network",
+        "abbr": "SCCN",
+        "RFS": "200 November",
+        "length": 30500,
+        "owners": "Southern Cross Cable Network",
+        "suppliers": "ASN, Fujitsu"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -120.83780500021601,
+            35.375179727797004
+          ],
+          [
+            -127.96637205493255,
+            32.633683810009
+          ],
+          [
+            -150.29377625846874,
+            28.501536896549183
+          ],
+          [
+            -123.85398511105862,
+            45.16972174817752
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "JUNO",
+        "RFS": "2024 Q4",
+        "length": 11710,
+        "owners": "Seren Juno Network Co, Ltd",
+        "suppliers": "NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -120.6261151842883,
+            35.11962610799388
+          ],
+          [
+            -126.32873031053504,
+            33.53035787088484
+          ],
+          [
+            -143.54225872413417,
+            36.379535776383776
+          ],
+          [
+            -126.42201082943075,
+            48.22243495710376
+          ],
+          [
+            -124.84427755372704,
+            48.456829028471645
+          ],
+          [
+            -123.76732965147824,
+            48.2061371691062
+          ],
+          [
+            -122.91053527808876,
+            48.188002589768104
+          ],
+          [
+            -122.64459954806131,
+            48.10737482585483
+          ],
+          [
+            -122.67538921507844,
+            47.98530761256748
+          ],
+          [
+            -122.26121301953677,
+            47.86343234897572
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bifrost",
+        "RFS": 2025,
+        "length": 19888,
+        "owners": "Keppel T&T, Meta, Telin",
+        "suppliers": "ASN"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -117.06278704735509,
+            32.37382388384914
+          ],
+          [
+            -119.02450426843976,
+            31.731142364313072
+          ],
+          [
+            -123.41093424135519,
+            34.14186213075034
+          ],
+          [
+            -120.4319891290624,
+            35.06606935649137
+          ],
+          [
+            -123.41093424135519,
+            34.14186213075034
+          ],
+          [
+            -129.0876082366584,
+            38.73593991829679
+          ],
+          [
+            -129.56914597050508,
+            41.54543632892887
+          ],
+          [
+            -124.16414284874617,
+            43.69297453829384
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Japan-US S1",
+        "abbr": "JUS-S1",
+        "RFS": 2001,
+        "owners": "Verizon",
+        "suppliers": "ASN, Fujitsu"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -120.8440714716883,
+            35.365614864329146
+          ],
+          [
+            -156.15753933808392,
+            20.254183975868173
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Asia-America Gateway",
+        "abbr": "AAG",
+        "RFS": "2009 November",
+        "length": 20000,
+        "owners": "AT&T, BT, Bharti Airtel, Eastern Telecom, Ezecom, Globe Telecom, Indosat Ooredoo, National Telecom, PLDT, Saigon Postel Corporation, Spark New Zealand, Starhub, Telekom Malaysia, Telkom Indonesia, Telstra, Unified National Networks (UNN), VNPT International, Viettel Corporation",
+        "suppliers": "ASN, NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -120.83644379951068,
+            35.36962163455968
+          ],
+          [
+            -156.54680412651453,
+            20.874442180349988
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 32
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "TPU",
+        "RFS": "2025 May",
+        "length": 13470,
+        "owners": "Google",
+        "suppliers": "NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -124.0971379720591,
+            40.834986141341176
+          ],
+          [
+            -152.4894464153291,
+            27.677238152912068
+          ],
+          [
+            -171.45454194533414,
+            23.821977110717697
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 33
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "FASTER",
+        "RFS": "2016 June",
+        "length": 11629,
+        "owners": "China Mobile, China Telecom, Google, KDDI, Singtel, TIME dotCom",
+        "suppliers": "NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -124.43534677401962,
+            43.080162313392805
+          ],
+          [
+            -149.46096303939777,
+            45.17241498377763
+          ],
+          [
+            -170.74850063006863,
+            42.07204647971969
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ACS Alaska-Oregon Network",
+        "abbr": "AKORN",
+        "RFS": "2009 April",
+        "length": 3000,
+        "owners": "Alaska Communications",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -124.10240905156947,
+            43.977561345455996
+          ],
+          [
+            -135.37584123419072,
+            44.411159897136486
+          ],
+          [
+            -152.39232688302897,
+            59.24704360951898
+          ],
+          [
+            -151.62916774624355,
+            59.66308440715497
+          ],
+          [
+            -152.1009857027548,
+            59.73585145282681
+          ],
+          [
+            -151.49969718065014,
+            60.808184412166895
+          ],
+          [
+            -151.22032827227298,
+            60.7191448710349
+          ],
+          [
+            -151.15813800820794,
+            60.899432248304436
+          ],
+          [
+            -149.86912962258432,
+            61.22300403720703
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 35
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Cross Pacific Cable System",
+        "RFS": "2018 May",
+        "length": 13618,
+        "owners": "China Mobile, China Telecom, China Unicom, Chunghwa Telecom, KT, Microsoft, Softbank Corp",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -123.97256090267,
+            45.20964512181098
+          ],
+          [
+            -149.5600995454359,
+            45.78705911382656
+          ],
+          [
+            -171.6919567386484,
+            42.53052643397112
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 36
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trans-Pacific Express Cable System",
+        "RFS": "2008 August",
+        "length": 17968,
+        "owners": "AT&T, China Telecom, China Unicom, Chunghwa Telecom, KT, NTT, Verizon",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -123.94030397632437,
+            45.649452759906154
+          ],
+          [
+            -149.92496491115656,
+            46.42920927238674
+          ],
+          [
+            -173.4458960000455,
+            42.91111791794634
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 37
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hawaiki",
+        "RFS": "2018 July",
+        "length": 14000,
+        "owners": "Hawaiki Submarine Cable LP",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -123.02615727047348,
+            45.52113121915818
+          ],
+          [
+            -157.81986350690724,
+            21.673241128899832
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 38
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "NorthStar",
+        "RFS": "1999 October",
+        "length": 3229,
+        "owners": "Alaska Communications",
+        "suppliers": "ASN"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -123.84483722362853,
+            45.56191901836522
+          ],
+          [
+            -128.17394901321836,
+            46.01384390382353
+          ],
+          [
+            -137.66354511360615,
+            57.56659694721489
+          ],
+          [
+            -136.51335566595833,
+            58.133003661787086
+          ],
+          [
+            -136.46129103826,
+            58.26644984581324
+          ],
+          [
+            -135.91098453070273,
+            58.33529822844403
+          ],
+          [
+            -135.17721857036526,
+            58.132969235690496
+          ],
+          [
+            -135.00255933253635,
+            58.156008468463085
+          ],
+          [
+            -135.0287220540243,
+            58.42688748676659
+          ],
+          [
+            -134.75781992353768,
+            58.49084189496597
+          ],
+          [
+            -135.04616491612893,
+            58.431460092633586
+          ],
+          [
+            -135.0112936708566,
+            58.165225038841044
+          ],
+          [
+            -135.14229951237724,
+            58.14679580223731
+          ],
+          [
+            -135.8673079259894,
+            58.31695170606454
+          ],
+          [
+            -136.49617372519103,
+            58.280233535401834
+          ],
+          [
+            -136.47835647306874,
+            58.11456407373018
+          ],
+          [
+            -137.65744938221331,
+            57.54253947374582
+          ],
+          [
+            -143.03658418433673,
+            59.11845032617853
+          ],
+          [
+            -146.89215664370712,
+            58.90384856321688
+          ],
+          [
+            -148.01496801956503,
+            59.72557727213274
+          ],
+          [
+            -147.6204126980213,
+            60.058351456958746
+          ],
+          [
+            -147.943404861426,
+            60.20609019554013
+          ],
+          [
+            -147.9970701255727,
+            60.68412163820406
+          ],
+          [
+            -148.7206527486583,
+            60.74037143177125
+          ],
+          [
+            -148.01713050691163,
+            60.656170481161155
+          ],
+          [
+            -146.41501008261415,
+            61.129504084490065
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pacific Crossing-1",
+        "abbr": "PC-1",
+        "RFS": "1999 December",
+        "length": 21000,
+        "owners": "Pacific Crossing",
+        "suppliers": "SubCom"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -122.20910617205413,
+            47.89461167819516
+          ],
+          [
+            -122.57439572582703,
+            47.99660814712226
+          ],
+          [
+            -122.59876499838391,
+            48.13904198722801
+          ],
+          [
+            -122.8849600470216,
+            48.24056191085256
+          ],
+          [
+            -123.74367377346732,
+            48.260784521124776
+          ],
+          [
+            -124.89476373134988,
+            48.519695401626336
+          ],
+          [
+            -126.32739552663898,
+            48.357988615030706
+          ],
+          [
+            -127.70892862032798,
+            38.59250591365583
+          ],
+          [
+            -123.53878007948381,
+            34.43522111663435
+          ],
+          [
+            -120.62281450754097,
+            35.13895295152848
+          ],
+          [
+            -123.49727408819699,
+            34.43517760469037
+          ],
+          [
+            -168.23218757945466,
+            40.1520610856561
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Topaz",
+        "RFS": 2023,
+        "owners": "Google",
+        "suppliers": "NEC"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -123.11745934357677,
+            49.26743710578239
+          ],
+          [
+            -124.52072737877087,
+            49.468169372679824
+          ],
+          [
+            -125.40287165850765,
+            50.299340868768894
+          ],
+          [
+            -126.9105800169425,
+            50.59940180996952
+          ],
+          [
+            -128.15111854765752,
+            51.07188857326457
+          ],
+          [
+            -174.1639763447383,
+            43.8346652230089
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": 41
     }
   ]
 }
