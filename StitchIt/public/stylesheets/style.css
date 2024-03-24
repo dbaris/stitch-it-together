@@ -6,7 +6,6 @@ body {
   color: #658c5d;
   text-align: center;
   /* padding: 50px; */
-  
   font: 14px "Elza", Helvetica, Arial, sans-serif;
 }
 
@@ -17,7 +16,7 @@ footer {
 h1 {
   font-family: "Gelica",'Times New Roman', Times, serif;
   font-size: 24px;
-  color: rgb(255,0,255);
+  color: #2c3387;
   text-align: left;
 }
 
@@ -25,6 +24,14 @@ h2 {
   color: #2c3387;
   font-family: "Gelica", 'Times New Roman', Times, serif;
   text-align: left;
+}
+
+h3 {
+  color: #658c5d;
+  /* font-family: "Gelica", 'Times New Roman', Times, serif; */
+  font-family: "variex", 'Times New Roman', Times, serif;
+  text-align: left;
+  font-size: 36px;
 }
 
 a {
@@ -40,12 +47,36 @@ a:hover {
   z-index: 1;
   position: absolute;
   margin-left: 3vw;
+  /* height: 100vh; */
+  width: 50vw;
 }
 
 #title-text {
-  display: absolute;
+  z-index: 1;
+  position: absolute;
+  bottom: 5vh;
+  margin-left: 3vw;
+}
+
+#title-text:hover {
+  cursor: grab;
+}
+
+#page-links {
   bottom: 5vh;
   left: 5vh;
+  width: 5vw;
+}
+
+.page-link {
+  color: #658c5d;
+  width: 2vw;
+}
+
+#subtitle {
+  color: #ff00ff;
+  font-family: "Elza", Helvetica, Arial, sans-serif;
+  font-style: italic;
 }
 
 select {
@@ -98,7 +129,7 @@ input {
 
 #map-projection-text {
   width: 30%;
-  padding-left: 10%;
+  /* padding-left: 10%; */
   display: inline-block;
   padding-right: 10vw;
   vertical-align: top;
@@ -137,4 +168,81 @@ canvas {
   margin-left: auto;
   margin-right: auto;
   display: block
+}
+
+#title-text-mobile {
+  display: none;
+}
+
+
+@media only screen and (orientation:portrait) {
+  body {
+    /* font-size: 8px; */
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #global-projections-canvas-container {
+    display: block;
+  }
+
+  canvas {
+    width: 80vw;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #title-text {
+    display: none;
+  }
+
+  #title-text-mobile {
+    display: block;
+    width: 80vw;
+    padding-left: 10vw;
+  }
+/*
+   #title {
+    width: 100%; 
+    display: block;
+    margin-left: none;
+    position: relative;
+  }
+
+  #title-text {
+    position: relative;
+  }
+
+  #page-links {
+    font-size: 24px;
+    position: relative;
+    display: block;
+    bottom: 0;
+    padding: none;
+    margin: none;
+    margin-left: 5vw;
+  }
+
+  .page-link {
+    display: inline-block;
+    width: 5vw;
+    font-size: 50px;
+    padding-left: 5vw;
+    text-align: left;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  .container {
+    margin-top: 5vh;
+  }
+
+  h2 {
+    font-size: 36px;
+  } */
+
 }
