@@ -20,25 +20,22 @@ block content
         p 
           | Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. 
           | However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are 
-          | not neutral decisions and neither are the images that they produce. In this way, maps can be understood as 
-          | narrative tools that generate a particular reality, a particular truth.
+          | not neutral decisions and neither are the images that they produce. Maps are as narrative tools that generate 
+          | a particular reality, a particular truth.
 
         p 
           | Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-
           | dimensional points to a two-dimensional representation, with different algorithms producing different 
           | representations. While some projections maintain geographic scale, others produce size distortions that 
-          | dramatically under-scale some nations while enlarging others. For example, the Mercator projection, developed 
-          | in 1569, is a rectangular projection where the distortion at each pole is so severe that the actual pole itself
-          | cannot be depicted. This makes Europe, the US, and Canada appear larger, while Africa and South America 
-          | appear much smaller. The Mercator projection has been the default map in American schools, teaching children
-          | at a distorted scale that reflects a Western worldview that de-prioritizes the global south. 
-
-        p 
-          | Use this map to overlay different projection algorithms. Overlay different colors. Flip global north & south. 
-          | Consider what each map prioritizes and why. 
+          | dramatically under-scale some nations while enlarging others. 
 
         div(id='global-projection1' class='projection-input')
         div(id='global-projection2' class='projection-input')
+
+        div(class='sources')
+          p Sources: 
+          a(href="https://observablehq.com/@d3/projection-comparison") Observable Projection Comparison Tutorial
+          p Snyder, John. Map Projections: A Working Manual. US GPO, 1987.
       div(id='global-projections-canvas-container')
         canvas(id='global-projections-canvas')
 
