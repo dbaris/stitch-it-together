@@ -124,16 +124,6 @@ var projections = [
 
 ];
 
-function getDescription(projection_name) {
-  var description = '';
-  projections.forEach(function(p) {
-    if (p['name'] == projection_name) {
-      description = p['description'];
-    }
-  })
-  return description;
-}
-
 class Projection {
   constructor(color, name, id_tag, projection, callback) {
     this.color = color;
