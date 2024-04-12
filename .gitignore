@@ -133,3 +133,6 @@ dist
 
 #vscode
 .vscode/*
+
+*/package-lock.json
+StitchIt/package-lock.json
