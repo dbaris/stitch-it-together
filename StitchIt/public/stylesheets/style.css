@@ -106,7 +106,7 @@ input {
 
 .container {
   /* position: absolute; */
-  /* width: 60vw; */
+  /* width:50vw; */
 }
 
 .page-link:hover {
@@ -137,10 +137,6 @@ input {
 
 #map-projection-text {
   width: 30%;
-<<<<<<< HEAD
-=======
-  /* padding-left: 10%; */
->>>>>>> 575394d45005d7f2574d9ecb656e625cb9623d9a
   display: inline-block;
   margin: 0 auto;
   padding-right: 5vw;
@@ -152,7 +148,7 @@ input {
   display: inline-block;
 }
 
-#migration{
+#migration {
   display: none;
   padding-top: 5vh;
   padding-left: 10%;
@@ -215,6 +211,10 @@ canvas {
     display: block;
     width: 80vw;
     padding-left: 10vw;
+  }
+
+  #map-projections, #migration, #infrastructure {
+    padding-top: 0;
   }
 /*
    #title {

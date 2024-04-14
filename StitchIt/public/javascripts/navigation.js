@@ -30,7 +30,7 @@ function toggleAllOff(){
         var section = document.getElementById(link_id['section_id']);
         var corresponding_link = document.getElementById(link_id['link_id']);
         section.style.display = "none";
-        corresponding_link.style.color = '#2c3387';
+        corresponding_link.style.color = '#658c5d';
     });
 };
 
