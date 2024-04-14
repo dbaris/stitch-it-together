@@ -2,21 +2,26 @@ extends layout
 
 block content
   div(class='outer')
+    div(id='title-text-mobile')
+      h1 STITCH IT TOGETHER: #[span(id='subtitle') COUNTERMAPPING]
     div(id='title')
-      div(id='title-text')
-        h1 #{title}: CounterMapping
-        div()
-          h2(class='page-link' id='global-projections-link') 1
-        div()
-          h2(class='page-link' id='migration-link') 2
-        div()
-          h2(class='page-link' id='infrastructure-link') 3
+      div(id='page-links')
+        div(class='page-link')
+          h3(id='global-projections-link') 1
+        div(class='page-link')
+          h3(id='migration-link') 2
+        div(class='page-link')
+          h3(id='infrastructure-link') 3
+    div(id='title-text')
+      h1 STITCH IT TOGETHER: #[span(id='subtitle') COUNTERMAPPING]
     div(id='source-code')
       a(href='https://github.com/dbaris/stitch-it-together') Source Code
 
     div(class='container' id='map-projections')
-      div(id='map-projection-text')
+      div(class='section-title')
         h2 Map Projections
+      div(id='map-projection-text')
+        
         p 
           | Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. 
           | However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are 
