@@ -137,6 +137,10 @@ input {
 
 #map-projection-text {
   width: 30%;
+<<<<<<< HEAD
+=======
+  /* padding-left: 10%; */
+>>>>>>> 575394d45005d7f2574d9ecb656e625cb9623d9a
   display: inline-block;
   margin: 0 auto;
   padding-right: 5vw;
