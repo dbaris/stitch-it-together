@@ -1,0 +1,1200 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adams County Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -90.07685797444236,
+          29.95070032265383
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adelanto ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.43892028487286,
+          34.56041670462116
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alamance County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -79.40359782447095,
+          36.06825653615661
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Allen Parish Public Safety Complex"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.78387928487328,
+          30.624486958321
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baker County Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -82.12167700000084,
+          30.295948182838117
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bluebonnet Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.88808200000068,
+          32.767619882715195
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boone County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.72846000000021,
+          39.03644469343894
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broward Transitional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -80.15090500000018,
+          26.2772236373425
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buffalo (Batavia) Service Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -78.20247574749315,
+          43.02018510054174
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Calhoun County Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -85.17529656517063,
+          42.31535493305512
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Caroline Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -77.26717661936414,
+          38.11159483073982
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Arizona Florence Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.37238922434906,
+          33.04438867837649
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Louisiana ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.15429322434902,
+          31.707725196707656
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chase County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -96.53841541696058,
+          38.36706207662334
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chippewa County Correctional Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.34557317136016,
+          46.49741630937726
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cibola County Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.90733306660746,
+          35.17996353297042
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clay County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -87.11907309240732,
+          39.52366697158973
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clinton County Correctional Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          152.7566249856219,
+          -27.58898154058639
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clinton County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.46675554140135,
+          44.7200570435476
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coastal Bend Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.75477467262873,
+          27.736676024434914
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CoreCivic Laredo Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.44851700000044,
+          27.529217319686808
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CoreCivic Webb County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.49181218650853,
+          27.369165416277156
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denver Contract Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.84964485372097,
+          39.76152395569582
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Desert View Annex"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.43890434127817,
+          34.560374373724784
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dodge Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -88.7044401665699,
+          43.40753200139039
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East Hidalgo Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.91732408465548,
+          26.29675878520635
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eden Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.83383001486567,
+          31.21760202982533
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Paso Service Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.36928218650779,
+          31.79384757920525
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Valle Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.7582585423275,
+          26.471874859765848
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elizabeth Contract Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -74.18978798581905,
+          40.66647403991618
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elmore County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.67315064885578,
+          43.13676141815671
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eloy Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.52020265011117,
+          32.817693829455266
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Federal Detention Center, Honolulu"
+      },
+      "geometry": {
+        "coordinates": [
+          -157.9303569269026,
+          21.338526160443323
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Florence Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.38233463096522,
+          33.06402903679478
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folkston ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -81.98074075031197,
+          30.874584525480557
+        ],
+        "type": "Point"
+      },
+      "id": 34
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Freeborn County Jail Services"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.36803999999988,
+          43.64602074922925
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Geauga County Safety Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -81.19140176735975,
+          41.50457825502119
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glades County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -81.21613022608214,
+          26.76921436358171
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Golden State Annex"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.2281706466232,
+          35.66955156053304
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forks County Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.0577819715599,
+          47.93537263315585
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hall County Department of Corrections"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.32839867517674,
+          40.92657789874875
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Henderson Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -114.97946986997893,
+          36.030525214636896
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houston Contract Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.31207729390816,
+          29.94718242854256
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IAH Polk Adult Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.00595967857278,
+          30.69750281897157
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Immigration Centers of America - Farmville"
+      },
+      "geometry": {
+        "coordinates": [
+          -78.43700325554315,
+          37.32380859822197
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Imperial Regional Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.3981395866103,
+          32.69159861466042
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackson Parish Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.71677854232829,
+          32.21581016816371
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Joe Corley Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.44835697896438,
+          30.33625815469631
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kandiyohi County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.04825300069072,
+          45.12232754663043
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karnes County Immigration Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.9113504037952,
+          28.881987291574944
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kay County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.06931334444678,
+          36.86783549200976
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Krome North Service Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -80.49065182429406,
+          25.754591544195847
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Limestone County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -96.50647571535868,
+          31.52616457510547
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Linn County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -91.66916008972328,
+          41.97472324125593
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mesa Verde ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.00637400080788,
+          35.38007398022914
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Monroe County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -83.39327064897508,
+          41.89548403210773
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Montgomery Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.442700953083,
+          30.337083670618824
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rolling Plains Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.72168038089646,
+          33.1768552403462
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Luis Regional Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -114.69245831755008,
+          32.48721479182292
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seneca County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -83.15370333932135,
+          41.07915164450685
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sherburne County Jail Services"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.62019078553739,
+          45.30431806715475
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Louisiana ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.58180401946599,
+          30.486987089998664
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Texas Family Residential Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.20045470420251,
+          28.657866892896948
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Texas ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.12129873919348,
+          28.893670694050428
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Clair County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -82.47941173475168,
+          42.9422470368234
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stewart Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.7713539517794,
+          32.036470757188454
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strafford County Corrections"
+      },
+      "geometry": {
+        "coordinates": [
+          -70.93987989059791,
+          43.21824557146593
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "T Don Hutto Residential Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.41955815121686,
+          30.56513114698251
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torrance County Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.01781085925049,
+          34.761998515631234
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Washoe County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.81325472906725,
+          39.57443249033108
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Winn Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.77993728372999,
+          31.8489455000517
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wyatt Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.38393360399931,
+          41.892413541021824
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moshannon Valley Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -78.24171965902228,
+          40.922559844560425
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nevada Southern Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.9765370143539,
+          36.25365813263231
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northwest ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.42133852053735,
+          47.249893743764744
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nye County Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.98679831168259,
+          36.220920094430014
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orange County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -74.36064768182985,
+          41.40414920459398
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Otay Mesa Detention Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.9155169310315,
+          32.57576812684695
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Otero County Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.28172875648558,
+          32.080314002204645
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pennington County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.22145954415917,
+          44.078628039672736
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phelps County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.37038333862336,
+          40.4396002129414
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pike County Correctional Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -75.07150200045001,
+          41.38879471287149
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pine Prairie ICE Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.42212713169698,
+          30.789028155805624
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Plymouth County Correctional Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -70.65135733055239,
+          41.93127846058394
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Polk County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.58787691534421,
+          41.65344703203448
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Isabel Service Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.34488274085837,
+          26.156129670452216
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pottawattamie County Jail"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.86512797369969,
+          41.28433056364119
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prairieland Detention Facility"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.19596230422957,
+          32.42128045210363
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Richwood Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.07893822240462,
+          32.456932109345104
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rio Grande Processing Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.48929535339269,
+          27.37780698389126
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "River Correctional Center"
+      },
+      "geometry": {
+        "coordinates": [
+          -91.55804154951797,
+          31.597068872506426
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Robert A. Deyton Detention Facility"},
+      "geometry": {
+        "coordinates": [
+          -84.3052579884428,
+          33.43490377343596
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

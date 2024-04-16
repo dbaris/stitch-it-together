@@ -1,0 +1,488 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tijuana Estacion Migratoria",  "capacity":100
+      },
+      "geometry": {
+        "coordinates": [
+          -117.01376838407809,
+          32.47128888128938
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Comitán Estacion Provisional", "capacity":120},
+      "geometry": {
+        "coordinates": [
+          -92.1155762672,16.2143243177
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Tapachula Estacion Migratoria", "capacity":960},
+      "geometry": {
+        "coordinates": [
+          -92.259106636, 14.9201954792
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Ciudad Juarez Estacion Migratoria", "capacity":60},
+      "geometry": {
+        "coordinates": [
+         -106.4839641005,31.7455859739
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Iztapalapa Estacion Migratoria", "capacity":430},
+      "geometry": {
+        "coordinates": [
+         -99.0832042694,19.3164691213
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Aguascalientes Estacion Migratoria", "capacity":36},
+      "geometry": {
+        "coordinates": [
+         -102.3202228546,21.9295505321
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Palenque Estacion Migratoria", "capacity":64},
+      "geometry": {
+        "coordinates": [
+          -91.9861221313,17.494728952
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "San Cristobal de las Estacion Provisional", "capacity":52},
+      "geometry": {
+        "coordinates": [
+          -92.6491641998, 16.7344615875
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Oaxaca Estacion Migratoria", "capacity":40},
+      "geometry": {
+        "coordinates": [
+          -96.7223131657, 17.0613488849
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "San Pedro Tapanatepec Estacion Provisional", "capacity":50},
+      "geometry": {
+        "coordinates": [
+          -94.1923570633, 16.3697624504
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Chetumal Estacion Migratoria", "capacity":70},
+      "geometry": {
+        "coordinates": [
+          -88.2833324,18.5262955
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Agua Prieta Estacion Provisional", "capacity":20},
+      "geometry": {
+        "coordinates": [
+          -109.5603740215, 31.3329465838
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Tenosique Estacion Migratoria", "capacity":100},
+      "geometry": {
+        "coordinates": [
+          -91.4452171326, 17.4577651556
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Villahermosa Estacion Migratoria", "capacity":70},
+      "geometry": {
+        "coordinates": [
+          -92.9429324, 17.9899559
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Matamoros Estacion Migratoria", "capacity":20},
+      "geometry": {
+        "coordinates": [
+          -97.5031471252, 25.8908475977
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Nuevo Laredo Estacion Migratoria", "capacity":24},
+      "geometry": {
+        "coordinates": [
+          -99.5072078705, 27.4980889528
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Zatecas Estacion Migratoria", "capacity":30},
+      "geometry": {
+        "coordinates": [
+          -102.5780582428, 22.7658140374 
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Janos Estacion Migratoria", "capacity":88},
+      "geometry": {
+        "coordinates": [
+          -108.1943893433, 30.8848425322 
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "El Ceibo Estacion Provisional", "capacity":45},
+      "geometry": {
+        "coordinates": [
+          -90.98837286181923, 17.2602872621919 
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Hermosillo Estacion Migratoria", "capacity":40},
+      "geometry": {
+        "coordinates": [
+          -110.9552621841, 29.0795712124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Monterrey Estacion Provisional", "capacity": 15},
+      "geometry": {
+        "coordinates": [
+          -100.31873703, -25.6427257262
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Piedras Negras Estacion Provisional", "capacity": 10},
+      "geometry": {
+        "coordinates": [
+          -100.5735039711, 28.6803802726
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Mexicali Estacion Migratoria", "capacity": 30},
+      "geometry": {
+        "coordinates": [
+          -115.438939333, 32.5858471793
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Campeche Estacion Provisional", "capacity": 3},
+      "geometry": {
+        "coordinates": [
+           -90.5397409201, 19.8456600896
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Ciudad de Carmen Estacion Provisional", "capacity": 7},
+      "geometry": {
+        "coordinates": [
+           -91.8236070871, 18.6426261197
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Escarcega Estacion Migratoria", "capacity": 40},
+      "geometry": {
+        "coordinates": [
+            -90.7393884659, 18.6066451798
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Ciudad Cuauhtemoc Estacion Provisional", "capacity": 20},
+      "geometry": {
+        "coordinates": [
+            -92.0023441315, 15.6676681597
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Echegaray Estacion Provisional", "capacity": 40},
+      "geometry": {
+        "coordinates": [
+            -93.149776, 15.654755
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "El Hueyate Estacion Provisional", "capacity": 50},
+      "geometry": {
+        "coordinates": [
+            -92.5157851, 15.1605676
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Huehuetan Estacion Provisional", "capacity": 30},
+      "geometry": {
+        "coordinates": [
+            -92.3931781, 15.0196034
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Playas de Catazaja Estacion Provisional", "capacity": 14},
+      "geometry": {
+        "coordinates": [
+            -92.0159912109, 17.7212180954
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "San Gregorio Chamic Estacion Provisional", "capacity": 20},
+      "geometry": {
+        "coordinates": [
+            -92.0056915283, 15.6802292948
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Tuxtla Gutierrez Estacion Migratoria", "capacity": 80},
+      "geometry": {
+        "coordinates": [
+            -93.1052684784, 16.753920429
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Chihuahua Estacion Migratoria", "capacity": 40},
+      "geometry": {
+        "coordinates": [
+            -106.0844027996, 28.6422573348
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Zihuatanejo Estacion Migratoria", "capacity": 10},
+      "geometry": {
+        "coordinates": [
+            -101.5539693832, 17.6442469586
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "La Ventosa Estacion Provisional", "capacity": 45},
+      "geometry": {
+        "coordinates": [
+            -94.9486541748, 16.5483416313
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "San Luis Potosi Estacion Migratoria", "capacity": 21},
+      "geometry": {
+        "coordinates": [
+            -100.9977650642, 22.143597377
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Mazatlan Estacion Migratoria", "capacity": 38},
+      "geometry": {
+        "coordinates": [
+            -106.4196896553, 23.192815224
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Miguel Aleman Estacion Provisional", "capacity":6},
+      "geometry": {
+        "coordinates": [
+            -99.0301179886, 26.3979434248
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Tampico Estacion Migratoria", "capacity":45},
+      "geometry": {
+        "coordinates": [
+            -97.7958029509, 22.2631939604
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Veracruz Estacion Migratoria", "capacity":35},
+      "geometry": {
+        "coordinates": [
+            -96.1401128769, 19.1994851593
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Merida Estacion Migratoria", "capacity":30},
+      "geometry": {
+        "coordinates": [
+           -89.6271300316, 20.9872158071
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Torreón Estacion Provisional", "capacity":21},
+      "geometry": {
+        "coordinates": [
+           -103.4533536, 25.5388592
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Saltillo Estacion Migratoria", "capacity":60},
+      "geometry": {
+        "coordinates": [
+           -100.9447860718, 25.4224430572
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Puebla Estacion Migratoria", "capacity":60},
+      "geometry": {
+        "coordinates": [
+           -98.2273221016, 19.0598463913
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Tlaxcala Estacion Migratoria", "capacity":40},
+      "geometry": {
+        "coordinates": [
+           -98.193397522, 19.3366264861
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Guadalajara Estacion Provisional", "capacity":17},
+      "geometry": {
+        "coordinates": [
+           -103.3450627327, 20.7269666347
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"name": "Pachuca Estacion Migratoria", "capacity":37},
+      "geometry": {
+        "coordinates": [
+           -98.7593650818, 20.0847523299
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1415 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alexandria Bay, AK"
+      },
+      "geometry": {
+        "coordinates": [
+          -141.00134282062248,
+          62.615275886688266
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Algonac, MI"
+      },
+      "geometry": {
+        "coordinates": [
+          -75.98317819488851,
+          44.347321107024385
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Algonac, MI"
+      },
+      "geometry": {
+        "coordinates": [
+          -82.53022917615836,
+          42.61899349435157
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ambrose, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.48684523095761,
+          48.999354031584886
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Harbor, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -114.72842379671238,
+          32.718161238232895
+        ],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Antler, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -101.29638090629979,
+          48.99953422123852
+        ],
+        "type": "Point"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -68.22742227116352,
+          44.398242442900056
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baudette, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -94.59045377344374,
+          48.71911527673228
+        ],
+        "type": "Point"
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beecher Falls, VT"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.5053712033451,
+          45.01336754628966
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blaine, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.78475256350085,
+          46.45034388838681
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boquillas, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -102.94549222475038,
+          29.18887123973151
+        ],
+        "type": "Point"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Point Roberts Boundary Bay, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -123.06820463440218,
+          49.00204655999616
+        ],
+        "type": "Point"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ketchikan, AK"
+      },
+      "geometry": {
+        "coordinates": [
+          -131.64268244204973,
+          55.34168274177625
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Skagway, AK"
+      },
+      "geometry": {
+        "coordinates": [
+          -135.16440961158392,
+          59.62967115646023
+        ],
+        "type": "Point"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Douglas, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -109.56037771729223,
+          31.333992133098747
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lukeville, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.81741602910964,
+          31.88002019213232
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Naco, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -109.94844313708835,
+          31.33418293390335
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nogales, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.94262243649543,
+          31.33273884706456
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Luis, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -114.78220142015624,
+          32.48505062134463
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sasabe, AZ"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.54433300602547,
+          31.483138690723422
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Calexico, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.49831820077466,
+          32.664770802221696
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Calexico East, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.38771401497401,
+          32.67277452431394
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cross Border Xpress, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.97493604829126,
+          32.54714361411736
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Otay Mesa, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.93843694180262,
+          32.55022024705545
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Ysidro, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.0289742039428,
+          32.542485134500794
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tecate, CA"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.6260848853452,
+          32.576455358394654
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eastport, ID"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.18136145498792,
+          49.00055002579532
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Porthill, ID"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.49957381704584,
+          48.99989806749193
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Calais, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.28355715670735,
+          45.19179729500041
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eastport, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -66.9841948434697,
+          44.90689787219719
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Fairfield, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.78938636105747,
+          46.765378910812416
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Kent, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -68.60430508832451,
+          47.24964966589363
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houlton, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.78124001206095,
+          46.13523016351638
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackman, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -70.39704790892905,
+          45.80548706777816
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Limestone, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.789585101904,
+          46.92465314395534
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madawaska, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -68.32858647886565,
+          47.36005743454834
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Van Buren, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.93075352131217,
+          47.159668613595045
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vanceboro, ME"
+      },
+      "geometry": {
+        "coordinates": [
+          -67.42852860349952,
+          45.56887913492676
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -83.04008214599371,
+          42.323904596965576
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Huron, MI"
+      },
+      "geometry": {
+        "coordinates": [
+          -82.42349108197548,
+          42.9987870280373
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sault Sainte Marie, MI"
+      },
+      "geometry": {
+        "coordinates": [
+          -84.3609643370621,
+          46.50838558756459
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Portage, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -89.58525906148914,
+          48.00157930133298
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "International Fals, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.40142166076463,
+          48.607839114335235
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lancaster, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -96.80160081798839,
+          49.00023080896142
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pinecreek, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.97790772789412,
+          48.99992535876814
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Warroad, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.3760451082022,
+          48.999016293949296
+        ],
+        "type": "Point"
+      },
+      "id": 45
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Roseau, MN"
+      },
+      "geometry": {
+        "coordinates": [
+          -95.76644984770286,
+          48.99959753340306
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Del Bonita, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.78841913185693,
+          48.998390898621466
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morgan, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.83182125751608,
+          48.99991543007627
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Opheim, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.377000907725,
+          49.00021465691589
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Piegan, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -113.37897005681629,
+          48.998156926294314
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Raymond, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.57343964161147,
+          48.9990937484402
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Roosville, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -115.05587811846411,
+          48.999378424235545
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scobey, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.40550775254543,
+          49.00188252931176
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sweetgrass, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.9627167373453,
+          49.00036232984141
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turner, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -108.38804544308633,
+          49.00069550097186
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whitlash, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.25810764754999,
+          48.997461622116674
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wild Horse, Havre, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.21497369272421,
+          48.99931948620156
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Willow Creek, Havre, MT"
+      },
+      "geometry": {
+        "coordinates": [
+          -109.73164285687226,
+          48.999952890730356
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Columbus, NM"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.6278709224831,
+          31.7848836885409
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santa Teresa, NM"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.67945257906266,
+          31.7840206161585
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buffalo Niagara Falls, NY"
+      },
+      "geometry": {
+        "coordinates": [
+          -78.9060698340776,
+          42.906894118405944
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cape Vincent, NY"
+      },
+      "geometry": {
+        "coordinates": [
+          -76.33502957281978,
+          44.12963500996051
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Champlain Rouses Point"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.45248288466772,
+          45.00898334433282
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Massena, NY"
+      },
+      "geometry": {
+        "coordinates": [
+          -74.73946697642022,
+          44.99059457966962
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ogdensburg, NY"
+      },
+      "geometry": {
+        "coordinates": [
+          -75.45757978368968,
+          44.73339090752711
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trout River, NY"
+      },
+      "geometry": {
+        "coordinates": [
+          -74.30829783819874,
+          44.99209512526707
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carbury, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -100.55555838813571,
+          48.99935560874658
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dunseith, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -100.05232109996774,
+          48.99923260214166
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fortuna, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.80939242436959,
+          48.999733058060684
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hannah, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.69416443065074,
+          49.00046995131041
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hansboro, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.34719549531336,
+          48.999827537943816
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maida, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.36489291623984,
+          49.00030669446198
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Neche, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.55659956697741,
+          49.000640301729334
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Noonan, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.00236933852294,
+          48.99886391852996
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northgate, Flaxton, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -102.2751615333547,
+          48.99888882188503
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pembina, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.23758402706993,
+          49.00072002296915
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portal, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -102.55650505464521,
+          48.99965193976601
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sarles, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.93850022132513,
+          49.00015956945404
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sherwood, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -101.62758490301154,
+          49.0005701838584
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St John, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.65989403775897,
+          49.001580709055304
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walhalla, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.90796115913903,
+          49.000329244365076
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Westhope, ND"
+      },
+      "geometry": {
+        "coordinates": [
+          -101.01528048365249,
+          49.001299373062466
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brownsville, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.50461698881158,
+          25.892017854104765
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Del Rio, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -100.92782303666594,
+          29.326703263853986
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eagle Pass, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -100.51191487073928,
+          28.705502014697956
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Paso, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.48694687348478,
+          31.74768828969512
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hidalgo, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.27137805688325,
+          26.09506804369049
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laredo, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.50746112329226,
+          27.49946379992373
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Progreso, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -97.95004684962848,
+          26.06204848294982
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rio Grande City, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -98.8024733903186,
+          26.365827048958863
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Roma, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.01910839327186,
+          26.4038562560132
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tornillo, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.14798400499639,
+          31.432830470825166
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ysleta, TX"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.33785418540683,
+          31.671064797991164
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Derby Line, VT"
+      },
+      "geometry": {
+        "coordinates": [
+          -72.0879969784591,
+          45.00589684329648
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Highgate, VT"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.08455596108902,
+          45.01546404568131
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Norton, VT"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.79353355414338,
+          45.010694560398576
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Richford, VT"
+      },
+      "geometry": {
+        "coordinates": [
+          -72.66234542425164,
+          45.015065475418595
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Danville, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.5034513658768,
+          49.000073486054305
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ferry, Curlew, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.7611549641379,
+          49.00010261662513
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frontier, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.83168444559178,
+          49.000491350135746
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lynden, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.4852086645513,
+          49.00231667463092
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laurier, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.22395444252493,
+          49.00000490067299
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Metaline Falls, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.29970245596127,
+          48.999963153328764
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nighthawk, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.67073846141173,
+          49.0001059047359
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oroville, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.46186120203669,
+          49.00011686919231
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Angeles, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -123.43059863998509,
+          48.12046628545511
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sumas, WA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.26536281110974,
+          49.00244185079666
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
