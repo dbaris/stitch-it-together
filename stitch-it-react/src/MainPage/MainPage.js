@@ -4,7 +4,10 @@ import MapProjection from '../MapProjections/MapProjections.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import {Projection} from "./projection.js";
-    
+
+
+const NORTH_AMERICA = "north_america";
+const WORLD = "world"
 
 var link_ids = [
     {'link_id': 'global-projections-link', 'section_id': 'map-projections'},
@@ -14,6 +17,9 @@ var link_ids = [
 
 
 function MainPage(props) {
+
+    var init_page = link_ids[0];
+    const [page, setPage] = useState(init_page)
 
     const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
     const p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
@@ -25,9 +31,7 @@ function MainPage(props) {
 
     
     useEffect( () => {
-            var init_page = link_ids[0];
             link_ids.forEach(createToggle);
-            open_on_page(init_page)
         }, [link_ids]
     )
 
@@ -38,9 +42,12 @@ function MainPage(props) {
             <div id='title-text'>
                 <h1> CounterMapping</h1>
                 <div></div>
-                <div><h2 class='page-link' id='global-projections-link'>1</h2></div>
-                <div><h2 class='page-link' id='migration-link'>2</h2></div>
-                <div><h2 class='page-link' id='infrastructure-link'>3</h2></div>
+                <div><h2 style = {(page.link_id == 'global-projections-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                    class='page-link' id='global-projections-link'>1</h2></div>
+                <div><h2 style = {(page.link_id == 'migration-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                    class='page-link' id='migration-link'>2</h2></div>
+                <div><h2 style = {(page.link_id == 'infrastructure-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                    class='page-link' id='infrastructure-link'>3</h2></div>
             </div>
         </div>
         <div id='source-code'>
@@ -48,7 +55,7 @@ function MainPage(props) {
         </div>
         <div class='container' id='map-projections'>
             <div id='map-projection-text'>
-                <h2>Map Projections</h2>
+                <h2>{page['section_id']}</h2>
                 <p>
                     Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are not neutral decisions and neither are the images that they produce. Maps are as narrative tools that generate a particular reality, a particular truth.
                 </p>
@@ -63,14 +70,7 @@ function MainPage(props) {
                     <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
                 </div>
             </div>
-            <MapProjection projections = {projections}/>
-        </div>
-        <div id='migration' class='container'>
-            <h2>Migration</h2>
-            <canvas id='migration-canvas'></canvas>
-        </div>
-        <div id='infrastructure' class='container'>
-            <h2>Infrastructure</h2>
+            <MapProjection projections = {projections} data_type= {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} id={"map_projections"}/>
         </div>
     </div>
 
@@ -80,24 +80,8 @@ function MainPage(props) {
     function createToggle(selected_id) {
         var object = document.getElementById(selected_id['link_id']);
         object.onclick = function(){
-            open_on_page(selected_id)
+            setPage(selected_id)
         };
-    }
-    
-    function open_on_page(selected_id) {
-        link_ids.forEach(function(link_id) {
-            var section = document.getElementById(link_id['section_id']);
-            var corresponding_link = document.getElementById(link_id['link_id']);
-            if (selected_id['section_id'] === link_id['section_id']) {
-                section.style.display = "block";
-                corresponding_link.style.color = 'rgb(255,0,255)';
-            } 
-            else {
-                section.style.display = "none";
-                corresponding_link.style.color = '#2c3387';
-            }  
-        });
-    
     }
 
 }

@@ -10,10 +10,9 @@ import {Projection} from "./projection.js";
 
 function MapProjection(props) {
 
-    const {projections} = props;
+    const {projections, data_type, id} = props;
     const NORTH_AMERICA = "north_america";
     const WORLD = "world"
-    const data_type = NORTH_AMERICA;
     
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
@@ -27,8 +26,8 @@ function MapProjection(props) {
 
 
     return (
-        <div id='global-projections-canvas-container'>
-            <canvas id='global-projections-canvas'></canvas>
+        <div id={'global-projections-canvas-container'+id} className='global-projections-canvas-container'>
+            <canvas id={'global-projections-canvas'+ id} lassName='global-projections-canvas'></canvas>
         </div> 
     );
 
@@ -56,10 +55,11 @@ function MapProjection(props) {
                 world = json;
             const land = topojson.feature(world, world.objects.land);
             // outline = land
-            const canvas = document.getElementById('global-projections-canvas');
+            const canvas = document.getElementById('global-projections-canvas'+id);
             const context = canvas.getContext("2d");
             context.canvas.width  = width;
             context.canvas.height = height;
+            //canvas background color
             context.fillStyle = "#fff";
             context.fillRect(0, 0, width, height);
 
@@ -89,7 +89,7 @@ function MapProjection(props) {
             function render_outline(projection) {
                 const path = d3.geoPath(projection.projection, context);
                 context.strokeStyle = projection.color;  
-                context.setLineDash(projection.line_dash);
+                context.setLineDash([projection.line_dash]);
                 context.save();
                 context.beginPath()
                 path(land)
@@ -106,8 +106,14 @@ function MapProjection(props) {
             for(var p of projections) {
                 console.log(fitWidth(p.projection, outline))
                 context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
-                (data_type === WORLD) ? render(p.projection, p.color) : render_outline(p);
-                // context.globalCompositeOperation = "add";
+                if(data_type == WORLD) {
+                    render(p.projection, p.color) 
+                }
+                else {
+                    render_outline(p) 
+                }
+                // can switch between many composite options -- add, multiply etc.
+                context.globalCompositeOperation = "multiply";
             }
         });
     }

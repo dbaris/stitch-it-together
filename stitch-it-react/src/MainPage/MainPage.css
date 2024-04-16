@@ -93,7 +93,7 @@ html {
   }
   
   #map-projections {
-    display: none;
+    display: block;
     padding-top: 5vh;
     padding-bottom: 5vh;
     width: 100%;
@@ -106,10 +106,6 @@ html {
     display: inline-block;
     padding-right: 10vw;
     vertical-align: top;
-  }
-  
-  #global-projections-canvas-container {
-    display: inline-block;
   }
   
   #migration{
