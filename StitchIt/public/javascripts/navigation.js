@@ -4,22 +4,29 @@ var link_ids = [
     {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
 ];
 
-function createToggle(selected_id){
+function createToggle(selected_id) {
     var object = document.getElementById(selected_id['link_id']);
     object.onclick = function(){
-        link_ids.forEach(function(link_id) {
-            var section = document.getElementById(link_id['section_id']);
-            var corresponding_link = document.getElementById(link_id['link_id']);
-            if (selected_id['section_id'] === link_id['section_id']){
-                section.style.display = "block";
-                corresponding_link.style.color = 'rgb(255,0,255)';
-            } 
-            else {
-                section.style.display = "none";
-                corresponding_link.style.color = '#2c3387';
-            }  
-        });
+        open_on_page(selected_id)
     };
 }
 
+function open_on_page(selected_id) {
+    link_ids.forEach(function(link_id) {
+        var section = document.getElementById(link_id['section_id']);
+        var corresponding_link = document.getElementById(link_id['link_id']);
+        if (selected_id['section_id'] === link_id['section_id']) {
+            section.style.display = "block";
+            corresponding_link.style.color = 'rgb(255,0,255)';
+        } 
+        else {
+            section.style.display = "none";
+            corresponding_link.style.color = '#2c3387';
+        }  
+    });
+
+}
+
+var init_page = link_ids[0];
 link_ids.forEach(createToggle);
+open_on_page(init_page)

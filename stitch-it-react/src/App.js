@@ -1,10 +1,10 @@
-import MapProjections from './MapProjections/MapProjections';
+import MainPage from './MainPage/MainPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <MapProjections/>
+      <MainPage/>
     </div>
   );
 }

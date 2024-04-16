@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import "./MapProjections.css"
-// import * as d3 from "https://cdn.skypack.dev/d3@7";
+import "./MainPage.css"
+import MapProjection from '../MapProjections/MapProjections.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
-import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
 import {Projection} from "./projection.js";
     
 
@@ -14,20 +13,15 @@ var link_ids = [
 ];
 
 
-function MapProjections(props) {
+function MainPage(props) {
 
-    var p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic, drawMap);
-    var p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator, drawMap);
-    
-    // const outline = ({type: "Sphere"});
-    // const graticule = d3.geoGraticule10();
-    
-    // var width = window.screen.width * .4;
-    // var height1 = fitWidth(p1.projection);
-    // var height2 = fitWidth(p2.projection);
-    // var height = Math.max(height1, height2);
+    const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
+    const p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
+    const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
+    const p4 = new Projection('#fdfd12', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
+    const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1)
 
-    // drawMap();
+    const projections = [p2, p1]
 
     
     useEffect( () => {
@@ -69,9 +63,7 @@ function MapProjections(props) {
                     <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
                 </div>
             </div>
-            <div id='global-projections-canvas-container'>
-                <canvas id='global-projections-canvas'></canvas>
-            </div>
+            <MapProjection projections = {projections}/>
         </div>
         <div id='migration' class='container'>
             <h2>Migration</h2>
@@ -108,9 +100,7 @@ function MapProjections(props) {
     
     }
 
-
-
 }
 
-export default MapProjections;
+export default MainPage;
 
