@@ -18,15 +18,16 @@ var link_ids = [
 
 function MainPage(props) {
 
-    var init_page = link_ids[0];
+    var init_page = link_ids[1];
     const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
     const p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
     const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
     const p4 = new Projection('#fdfd12', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
-    const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1)
+    const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
+    const p6 = new Projection('#000000', "Equirectangular", 'global-projection6', d3.geoNaturalEarth1);
 
     const [page, setPage] = useState(init_page)
-    const [projections, setProjections] = useState([p1, p2])
+    const [projections, setProjections] = useState([p2, p1])
 
 
     

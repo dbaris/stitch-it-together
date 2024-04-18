@@ -12,11 +12,10 @@ function MapProjection(props) {
     const {projections, data_type, id} = props;
     const NORTH_AMERICA = "north_america";
     const WORLD = "world"
-    
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
 
-    var width = window.screen.width * .4;
+    var width = window.screen.width * .8;
     console.log(projections)
     // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
@@ -30,19 +29,22 @@ function MapProjection(props) {
         </div> 
     );
 
-    function resize(){
-        height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
+    //What is this resize function for?
+    // function resize(){
+    //     height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
+    //     // proprotion to screen
+    //     while (height > window.screen.height * .75){
+    //         width = width * .9;
+    //         height =  Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
+    //         // height = height * .9
+    //     }
+    // }
 
-        // proprotion to screen
-        while (height > window.screen.height * .75){
-            width = width * .9;
-            height =  Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
-            // height = height * .9
-        }
-    }
+    //context.save() -- works like a p5 push call
+    //context.restore() -- works like a p5 pop call. 
 
     function drawMap() {
-        resize();
+        // resize();
         fetch(data_type === NORTH_AMERICA ? './data/north_america.json' : './data/world.json')
             .then((response) => response.json()
             )
@@ -56,54 +58,41 @@ function MapProjection(props) {
             // outline = land
             const canvas = document.getElementById('global-projections-canvas'+id);
             const context = canvas.getContext("2d");
-            context.canvas.width  = width;
+            context.canvas.width  = width/2;
             context.canvas.height = height;
             //canvas background color
             context.fillStyle = "#fff";
-            context.fillRect(0, 0, width, height);
 
             function render(projection, color) {
+                context.globalCompositeOperation = "multiply";
                 const path = d3.geoPath(projection, context);
                 context.fillStyle = context.strokeStyle = color;
                 context.save();
-                context.beginPath()
-                path(outline)
-                context.clip();
-                context.beginPath()
-                path(graticule)
-                context.globalAlpha = 0.3
-                context.stroke();
-                context.beginPath()
-                path(land)
-                context.globalAlpha = 1.0
-                context.fill();
+                //  *** grid lines ***  //
+                context.beginPath(); path(graticule); context.globalAlpha = 0.3; context.stroke();
+                // *** rendering different projections *** //
+                context.beginPath(); path(land); context.globalAlpha = 1.0; context.fill();
                 context.restore();
-                context.beginPath()
-                path(outline)
-                context.stroke();
+                // ** Rendering globe outline **  //
+                context.beginPath(); path(outline); context.stroke();
                 context.restore();
-                context.save();
             }
 
             function render_outline(projection) {
+                context.globalCompositeOperation = "add";
                 const path = d3.geoPath(projection.projection, context);
                 context.strokeStyle = projection.color;  
                 context.setLineDash([projection.line_dash]);
                 context.save();
-                context.beginPath()
-                path(land)
-                context.clip();
-                context.beginPath()
-                path(land)
-                context.globalAlpha = 1.0
-                context.stroke();
-                context.save();
+                // *** -- clipping path, not sure we need this, cutting off half of stroke
+                // context.beginPath(); path(land); context.clip();
+                // *** --- render outlines 
+                context.beginPath(); path(land); context.globalAlpha = 1.0; context.stroke();
                 context.restore();
 
             }
             context.save();
             for(var p of projections) {
-                // console.log(fitWidth(p.projection, outline))
                 context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
                 if(data_type == WORLD) {
                     render(p.projection, p.color) 
@@ -111,8 +100,6 @@ function MapProjection(props) {
                 else {
                     render_outline(p) 
                 }
-                // can switch between many composite options -- add, multiply etc.
-                context.globalCompositeOperation = "multiply";
             }
         });
     }
