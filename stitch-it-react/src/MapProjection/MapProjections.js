@@ -4,7 +4,6 @@ import "./MapProjections.css"
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
-import {Projection} from "./projection.js";
 
 
 
@@ -18,16 +17,16 @@ function MapProjection(props) {
     const graticule = d3.geoGraticule10();
 
     var width = window.screen.width * .4;
-    console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
+    console.log(projections)
+    // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
-    console.log(height)
 
     drawMap();
 
 
     return (
         <div id={'global-projections-canvas-container'+id} className='global-projections-canvas-container'>
-            <canvas id={'global-projections-canvas'+ id} lassName='global-projections-canvas'></canvas>
+            <canvas id={'global-projections-canvas'+ id} className='global-projections-canvas'></canvas>
         </div> 
     );
 
@@ -104,7 +103,7 @@ function MapProjection(props) {
             }
             context.save();
             for(var p of projections) {
-                console.log(fitWidth(p.projection, outline))
+                // console.log(fitWidth(p.projection, outline))
                 context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
                 if(data_type == WORLD) {
                     render(p.projection, p.color) 
