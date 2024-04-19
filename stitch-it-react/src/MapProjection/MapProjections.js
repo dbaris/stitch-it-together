@@ -6,16 +6,15 @@ import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4"
 import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
 
 
-
 function MapProjection(props) {
 
-    const {projections, data_type, id} = props;
+    const {projections, data_type, id, dataset_paths, width_multiplier} = props;
     const NORTH_AMERICA = "north_america";
     const WORLD = "world"
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
 
-    var width = window.screen.width * .8;
+    var width = window.screen.width * .4 * width_multiplier;
     console.log(projections)
     // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
@@ -58,7 +57,7 @@ function MapProjection(props) {
             // outline = land
             const canvas = document.getElementById('global-projections-canvas'+id);
             const context = canvas.getContext("2d");
-            context.canvas.width  = width/2;
+            context.canvas.width  = width / width_multiplier;
             context.canvas.height = height;
             //canvas background color
             context.fillStyle = "#fff";
@@ -92,6 +91,7 @@ function MapProjection(props) {
 
             }
             context.save();
+            var i = 0;
             for(var p of projections) {
                 context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
                 if(data_type == WORLD) {
@@ -100,9 +100,40 @@ function MapProjection(props) {
                 else {
                     render_outline(p) 
                 }
+                if(i === 0) {
+                    for(var d of dataset_paths){
+                        renderFeatureCollection(d, p.projection, context, "blue")
+                    }
+                }
+                i++;
             }
         });
     }
+
+    function renderFeatureCollection(file_path, projection, context, color) {
+        fetch(file_path)
+        .then((response) => response.json()
+        )
+        .then((json) => {
+            // console.log(json)
+            var geometries = json.features;
+            context.save();
+            // console.log(geometries[i])
+            const path = d3.geoPath(projection, context);
+            context.strokeStyle = color;
+            context.beginPath(); path(json); context.globalAlpha = 0.3; context.stroke(); context.fill();
+                // *** rendering different projections *** //
+            context.restore();
+            // d3.select("svg").selectAll("circle.cities").data(customerListData.features)
+            // .enter()
+            // .append("circle")
+            // .attr("r", 5)
+            // .attr("cx", function(d) {return projection([d.geometry.coordinates])[0]})
+            // .attr("cy", function(d) {return projection([d.geometry.coordinates])[1]})
+            // .on("click", function(d) {console.log(d)})
+        })
+    }
+    
  
     function fitWidth(projection, outline) {
         const [[x0, y0], [x1, y1]] = d3.geoPath(projection.fitWidth(width, outline)).bounds(outline);

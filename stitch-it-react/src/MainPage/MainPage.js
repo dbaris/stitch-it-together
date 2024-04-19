@@ -15,10 +15,34 @@ var link_ids = [
     {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
 ];
 
+var migration_centers = "./data/estaciones_migratorias.json";
+var ice_detention_centers = "./data/ice_detention_centers.json";
+var butterfly = "./data/butterfly.json";
+var big_lakes = "./data/water/big_lakes.json";
+var rivers = "./data/water/rivers.json";
+var small_lakes = "./data/water/small_lakes.json"
+var historic_boarders = "./data/historical_borders.json"
+var undersea_cables = "./data/undersea_cables.json"
+var railroads = "./data/railroads.json";
+var pipelines =  "./data/pipelines.json";
+var border_crossings = "./data/border_crossings.json";
+
+const migration_datasets = [butterfly, migration_centers, ice_detention_centers, railroads, historic_boarders, big_lakes, rivers, small_lakes]
+const infrastructure_datasets = [undersea_cables, pipelines, big_lakes, rivers, small_lakes, border_crossings]
+
+const datasets = {
+    "migration": migration_datasets,
+    'infrastructure': infrastructure_datasets,
+    "map-projections": []
+}
+
+
+
 
 function MainPage(props) {
 
-    var init_page = link_ids[1];
+    var init_page = 1;
+
     const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
     const p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
     const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
@@ -26,10 +50,48 @@ function MainPage(props) {
     const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
     const p6 = new Projection('#000000', "Equirectangular", 'global-projection6', d3.geoNaturalEarth1);
 
-    const [page, setPage] = useState(init_page)
-    const [projections, setProjections] = useState([p2, p1])
+    const init_projections = {
+        "migration" : [p2],
+        "infrastructure": [p2], 
+        "map-projections": [p1, p2]
+    }
 
+    const [page, setPage] = useState(link_ids[init_page])
+    const [projections, setProjections] = useState(init_projections[link_ids[init_page].section_id])
 
+    const map_writeup = () => {
+     return [
+        <div>
+            <p> 
+                Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are not neutral decisions and neither are the images that they produce. Maps are as narrative tools that generate a particular reality, a particular truth.
+                    </p>
+            <p>
+            Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-dimensional points to a two-dimensional representation, with different algorithms producing different representations. While some projections maintain geographic scale, others produce size distortions that dramatically under-scale some nations while enlarging others.
+            </p> 
+        </div>]
+    }
+    const migration_writeup = () => {
+        return [
+            <div>
+                <p> 
+                    Migration Writeup Here
+                </p>
+            </div>]
+    }
+    const infrastructure_writeup = () => {
+        return [
+            <div>
+                <p> 
+                    Infrastructure Writeup Here
+                </p>
+            </div>]
+    }
+
+    const writeups = {
+        "migration" : migration_writeup(),
+        "infrastructure": infrastructure_writeup(), 
+        "map-projections": map_writeup(),
+    }
     
     useEffect( () => {
             link_ids.forEach(createToggle);
@@ -47,7 +109,7 @@ function MainPage(props) {
         <div className='outer'>
         <div id='title'>
             <div id='title-text'>
-                <h1> CounterMapping</h1>
+                <h1>Stitch It Together: CounterMapping</h1>
                 <div></div>
                 <div><h2 style = {(page.link_id == 'global-projections-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='global-projections-link'>1</h2></div>
@@ -63,12 +125,7 @@ function MainPage(props) {
         <div className='container' id='map-projections'>
             <div id='map-projection-text'>
                 <h2>{page['section_id']}</h2>
-                <p>
-                    Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are not neutral decisions and neither are the images that they produce. Maps are as narrative tools that generate a particular reality, a particular truth.
-                </p>
-                <p>
-                    Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-dimensional points to a two-dimensional representation, with different algorithms producing different representations. While some projections maintain geographic scale, others produce size distortions that dramatically under-scale some nations while enlarging others.
-                </p>
+                <div>{writeups[page['section_id']]}</div>
                 <GenerateForms/>
                 <div className='sources'>
                     <p>Sources:</p>
@@ -77,7 +134,11 @@ function MainPage(props) {
                 </div>
             </div>
 
-            <MapProjection projections = {projections} data_type= {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} id={"map_projections"}/>
+            <MapProjection projections = {projections} 
+                data_type = {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} 
+                dataset_paths = {datasets[page.section_id]}
+                width_multiplier = {(page.section_id === "map-projections") ? 1 : 2}
+                id={"map_projections"}/>
         </div>
     </div>
 
@@ -88,6 +149,9 @@ function MainPage(props) {
         var object = document.getElementById(selected_id['link_id']);
         object.onclick = function(){
             setPage(selected_id)
+            var ps = init_projections[selected_id.section_id]
+            setProjections(ps)
+ 
         };
     }
 
