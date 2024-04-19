@@ -8,7 +8,7 @@ import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2";
 
 function MapProjection(props) {
 
-    const {projections, data_type, id, dataset_paths, width_multiplier} = props;
+    const {projections, data_type, id, dataset_paths, width_multiplier, top} = props;
     const NORTH_AMERICA = "north_america";
     const WORLD = "world"
     var outline = ({type: "Sphere"});
@@ -24,7 +24,7 @@ function MapProjection(props) {
 
     return (
         <div id={'global-projections-canvas-container'+id} className='global-projections-canvas-container'>
-            <canvas id={'global-projections-canvas'+ id} className='global-projections-canvas'></canvas>
+            <canvas style={{top: top}} id={'global-projections-canvas'+ id} className='global-projections-canvas'></canvas>
         </div> 
     );
 
@@ -110,8 +110,8 @@ function MapProjection(props) {
         });
     }
 
-    function renderFeatureCollection(file_path, projection, context, color) {
-        fetch(file_path)
+    function renderFeatureCollection(d, projection, context, color) {
+        fetch(d.path)
         .then((response) => response.json()
         )
         .then((json) => {
@@ -120,7 +120,7 @@ function MapProjection(props) {
             context.save();
             // console.log(geometries[i])
             const path = d3.geoPath(projection, context);
-            context.strokeStyle = color;
+            context.strokeStyle = d.color;
             context.beginPath(); path(json); context.globalAlpha = 0.3; context.stroke(); context.fill();
                 // *** rendering different projections *** //
             context.restore();

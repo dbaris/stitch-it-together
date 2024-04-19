@@ -26,7 +26,8 @@ html {
     padding-top: 5vh;
     margin-left: auto;
     margin-right: auto;
-    display: block
+    display: block;
+    position: relative;
   }
   .global-projections-canvas-container {
     display: inline-block;

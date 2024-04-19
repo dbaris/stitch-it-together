@@ -15,17 +15,17 @@ var link_ids = [
     {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
 ];
 
-var migration_centers = "./data/estaciones_migratorias.json";
-var ice_detention_centers = "./data/ice_detention_centers.json";
-var butterfly = "./data/butterfly.json";
-var big_lakes = "./data/water/big_lakes.json";
-var rivers = "./data/water/rivers.json";
-var small_lakes = "./data/water/small_lakes.json"
-var historic_boarders = "./data/historical_borders.json"
-var undersea_cables = "./data/undersea_cables.json"
-var railroads = "./data/railroads.json";
-var pipelines =  "./data/pipelines.json";
-var border_crossings = "./data/border_crossings.json";
+var migration_centers = {path: "./data/estaciones_migratorias.json", color: "green"};
+var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "yellow"};
+var butterfly = {path: "./data/butterfly.json", color: "pink"};
+var big_lakes = {path: "./data/water/big_lakes.json", color: "blue"};
+var rivers = {path: "./data/water/rivers.json", color: "#34a1eb"};
+var small_lakes = {path: "./data/water/small_lakes.json", color: "blue"}; 
+var historic_boarders = {path: "./data/historical_borders.json", color: "red"};
+var undersea_cables = {path: "./data/undersea_cables.json", color: "purple"};
+var railroads = {path: "./data/railroads.json", color: "green"};
+var pipelines =  {path: "./data/pipelines.json", color: "orange"};
+var border_crossings = {path: "./data/border_crossings.json", color: "brown"};
 
 const migration_datasets = [butterfly, migration_centers, ice_detention_centers, railroads, historic_boarders, big_lakes, rivers, small_lakes]
 const infrastructure_datasets = [undersea_cables, pipelines, big_lakes, rivers, small_lakes, border_crossings]
@@ -44,7 +44,8 @@ function MainPage(props) {
     var init_page = 1;
 
     const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
-    const p2 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
+    const p2 = new Projection('black', "Mercator", 'global-projection2', d3.geoMercator);
+    const p7 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
     const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
     const p4 = new Projection('#fdfd12', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
     const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
@@ -53,7 +54,7 @@ function MainPage(props) {
     const init_projections = {
         "migration" : [p2],
         "infrastructure": [p2], 
-        "map-projections": [p1, p2]
+        "map-projections": [p1, p7]
     }
 
     const [page, setPage] = useState(link_ids[init_page])
@@ -137,7 +138,8 @@ function MainPage(props) {
             <MapProjection projections = {projections} 
                 data_type = {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} 
                 dataset_paths = {datasets[page.section_id]}
-                width_multiplier = {(page.section_id === "map-projections") ? 1 : 2}
+                width_multiplier = {(page.section_id === "map-projections") ? 1 : 3.0}
+                top = {(page.section_id === "map-projections") ? '0px' : '-200px'}
                 id={"map_projections"}/>
         </div>
     </div>
