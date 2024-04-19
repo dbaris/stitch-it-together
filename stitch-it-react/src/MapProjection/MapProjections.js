@@ -14,7 +14,7 @@ function MapProjection(props) {
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
 
-    var width = window.screen.width * .4 * width_multiplier;
+    var width = window.screen.width * .495 * width_multiplier;
     console.log(projections)
     // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
@@ -121,7 +121,7 @@ function MapProjection(props) {
             // console.log(geometries[i])
             const path = d3.geoPath(projection, context);
             context.strokeStyle = d.color;
-            context.beginPath(); path(json); context.globalAlpha = 0.3; context.stroke(); context.fill();
+            context.beginPath(); path(json); context.globalAlpha = d.opacity; context.stroke();
                 // *** rendering different projections *** //
             context.restore();
             // d3.select("svg").selectAll("circle.cities").data(customerListData.features)

@@ -15,17 +15,17 @@ var link_ids = [
     {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
 ];
 
-var migration_centers = {path: "./data/estaciones_migratorias.json", color: "green"};
-var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "yellow"};
-var butterfly = {path: "./data/butterfly.json", color: "pink"};
-var big_lakes = {path: "./data/water/big_lakes.json", color: "blue"};
-var rivers = {path: "./data/water/rivers.json", color: "#34a1eb"};
-var small_lakes = {path: "./data/water/small_lakes.json", color: "blue"}; 
-var historic_boarders = {path: "./data/historical_borders.json", color: "red"};
-var undersea_cables = {path: "./data/undersea_cables.json", color: "purple"};
-var railroads = {path: "./data/railroads.json", color: "green"};
-var pipelines =  {path: "./data/pipelines.json", color: "orange"};
-var border_crossings = {path: "./data/border_crossings.json", color: "brown"};
+var migration_centers = {path: "./data/estaciones_migratorias.json", color: "green", opacity: "1", name: "migration centers"};
+var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "yellow",opacity: "1", name: "ice detention centers"};
+var butterfly = {path: "./data/butterfly.json", color: "pink", opacity: ".3", name: "butterfly migration"};
+var big_lakes = {path: "./data/water/big_lakes.json", color: "blue", opacity: ".2", name: "big lakes"};
+var rivers = {path: "./data/water/rivers.json", color: "#34a1eb", opacity: ".2", name: "rivers"};
+var small_lakes = {path: "./data/water/small_lakes.json", color: "blue",opacity: ".2", name: "small lakes"}; 
+var historic_boarders = {path: "./data/historical_borders.json", color: "red", opacity: "1", name: "historical borders"};
+var undersea_cables = {path: "./data/undersea_cables.json", color: "purple", opacity: ".5", name: 'undersea cables'};
+var railroads = {path: "./data/railroads.json", color: "green", opacity: ".2", name: "railroads"};
+var pipelines =  {path: "./data/pipelines.json", color: "orange", opacity: ".8", name: "pipelines"};
+var border_crossings = {path: "./data/border_crossings.json", color: "brown", opacity: ".8", name: 'border crossings'};
 
 const migration_datasets = [butterfly, migration_centers, ice_detention_centers, railroads, historic_boarders, big_lakes, rivers, small_lakes]
 const infrastructure_datasets = [undersea_cables, pipelines, big_lakes, rivers, small_lakes, border_crossings]
@@ -47,13 +47,13 @@ function MainPage(props) {
     const p2 = new Projection('black', "Mercator", 'global-projection2', d3.geoMercator);
     const p7 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
     const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
-    const p4 = new Projection('#fdfd12', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
+    const p4 = new Projection('black', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
     const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
     const p6 = new Projection('#000000', "Equirectangular", 'global-projection6', d3.geoNaturalEarth1);
 
     const init_projections = {
-        "migration" : [p2],
-        "infrastructure": [p2], 
+        "migration" : [p4],
+        "infrastructure": [p4], 
         "map-projections": [p1, p7]
     }
 
@@ -108,6 +108,9 @@ function MainPage(props) {
 
     return (
         <div className='outer'>
+            {/********************************************* 
+                                Nav Menu
+            *********************************************/}
         <div id='title'>
             <div id='title-text'>
                 <h1>Stitch It Together: CounterMapping</h1>
@@ -120,6 +123,9 @@ function MainPage(props) {
                     className='page-link' id='infrastructure-link'>3</h2></div>
             </div>
         </div>
+        {/********************************************* 
+                    Write Up & Forms
+        *********************************************/}
         <div id='source-code'>
             <a href='https://github.com/dbaris/stitch-it-together'>Source Code</a>
         </div>
@@ -133,12 +139,21 @@ function MainPage(props) {
                     <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>
                     <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
                 </div>
+                {/********************************************* 
+                                    Index 
+                *********************************************/}
+                <div>
+                    <h2>Index</h2>
+                    <Index/>
+                </div>
             </div>
-
+            {/********************************************* 
+                            Map Canvas
+            *********************************************/}
             <MapProjection projections = {projections} 
                 data_type = {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} 
                 dataset_paths = {datasets[page.section_id]}
-                width_multiplier = {(page.section_id === "map-projections") ? 1 : 3.0}
+                width_multiplier = {(page.section_id === "map-projections") ? 1 : 2.8}
                 top = {(page.section_id === "map-projections") ? '0px' : '-200px'}
                 id={"map_projections"}/>
         </div>
@@ -156,7 +171,18 @@ function MainPage(props) {
  
         };
     }
-
+    function Index() {
+        var ds = datasets[page.section_id]
+        var content = []
+        for(var d of ds) {
+            content.push(
+            <svg height="50" width="500" xmlns="http://www.w3.org/2000/svg">
+                <circle r="10" cx="20" cy="10" fill={d.color} />
+                <text x="50" y="10">{d.name}</text>
+            </svg>)
+        }
+        return content;
+    }
     
     function GenerateForms() {
         var content = []

@@ -28,6 +28,7 @@ html {
     margin-right: auto;
     display: block;
     position: relative;
+    left: -200px;
   }
   .global-projections-canvas-container {
     display: inline-block;
