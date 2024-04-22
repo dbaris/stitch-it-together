@@ -14,7 +14,7 @@ function MapProjection(props) {
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
 
-    var width = window.screen.width * .495 * width_multiplier;
+    var width = window.screen.width * .49 * width_multiplier;
     console.log(projections)
     // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
@@ -59,8 +59,10 @@ function MapProjection(props) {
             const context = canvas.getContext("2d");
             context.canvas.width  = width / width_multiplier;
             context.canvas.height = height;
+            context.translate(-100, -200)
+            context.scale(3, 3) // Doubles size of anything draw to canvas.
             //canvas background color
-            context.fillStyle = "#fff";
+            context.fillStyle = "#fff"
 
             function render(projection, color) {
                 context.globalCompositeOperation = "multiply";
@@ -93,7 +95,7 @@ function MapProjection(props) {
             context.save();
             var i = 0;
             for(var p of projections) {
-                context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
+                // context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
                 if(data_type == WORLD) {
                     render(p.projection, p.color) 
                 }
@@ -120,6 +122,7 @@ function MapProjection(props) {
             context.save();
             // console.log(geometries[i])
             const path = d3.geoPath(projection, context);
+            path.pointRadius(.5)
             context.strokeStyle = d.color;
             context.beginPath(); path(json); context.globalAlpha = d.opacity; context.stroke();
                 // *** rendering different projections *** //

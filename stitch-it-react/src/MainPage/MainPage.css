@@ -81,7 +81,11 @@ html {
   .page-link:hover {
     color: yellow;
     cursor: grab;
-  
+  }
+
+  .page-link {
+    color: #658c5d;
+    width: 20px;
   }
   
   .projection-input {

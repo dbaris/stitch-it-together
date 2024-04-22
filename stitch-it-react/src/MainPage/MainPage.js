@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "./MainPage.css"
 import MapProjection from '../MapProjection/MapProjections.js';
+import MapProjectionSVG from '../MapProjection/MapProjectionsSVG.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import {Projection, projection_options} from "./projection.js";
+import Zoom from '../Zoom.js';
 import _ from 'lodash';
 
 const NORTH_AMERICA = "north_america";
@@ -41,19 +43,19 @@ const datasets = {
 
 function MainPage(props) {
 
-    var init_page = 1;
+    var init_page = 0;
 
     const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
     const p2 = new Projection('black', "Mercator", 'global-projection2', d3.geoMercator);
     const p7 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
     const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
-    const p4 = new Projection('black', "Mercator", 'global-projection4', d3_geo_projection.geoMiller);
+    const p4 = new Projection('black', "Miller Cylandrical", 'global-projection4', d3_geo_projection.geoMiller);
     const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
     const p6 = new Projection('#000000', "Equirectangular", 'global-projection6', d3.geoNaturalEarth1);
 
     const init_projections = {
-        "migration" : [p4],
-        "infrastructure": [p4], 
+        "migration" : [p2],
+        "infrastructure": [p2], 
         "map-projections": [p1, p7]
     }
 
@@ -146,15 +148,16 @@ function MainPage(props) {
                     <h2>Index</h2>
                     <Index/>
                 </div>
+                {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
             </div>
             {/********************************************* 
                             Map Canvas
             *********************************************/}
-            <MapProjection projections = {projections} 
+            <MapProjectionSVG projections = {projections} 
                 data_type = {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} 
                 dataset_paths = {datasets[page.section_id]}
-                width_multiplier = {(page.section_id === "map-projections") ? 1 : 2.8}
-                top = {(page.section_id === "map-projections") ? '0px' : '-200px'}
+                width_multiplier = {(page.section_id === "map-projections") ? 1 : 1}
+                top = {(page.section_id === "map-projections") ? '0px' : '0px'}
                 id={"map_projections"}/>
         </div>
     </div>
