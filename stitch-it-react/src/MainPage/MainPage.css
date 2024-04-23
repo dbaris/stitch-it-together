@@ -73,10 +73,6 @@ html {
     text-align: left;
   }
   
-  .container {
-    position: absolute;
-    width: 60vw;
-  }
   
   .page-link:hover {
     color: yellow;
@@ -106,15 +102,15 @@ html {
   
   #map-projection-text {
     width: 30%;
-    padding-left: 10%;
+    padding-left: 2%;
     display: inline-block;
-    padding-right: 10vw;
+    padding-right: 2%;
     vertical-align: top;
   }
   
   #migration{
     display: none;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
     padding-left: 10%;
     padding-bottom: 5vh;
     width: 100%;
@@ -122,7 +118,7 @@ html {
   
   #infrastructure {
     display: none;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
     padding-left: 10%;
     padding-bottom: 5vh;
     width: 100%;
@@ -134,11 +130,3 @@ html {
     right: 5vh;
   }
   
-  canvas {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: block
-  }

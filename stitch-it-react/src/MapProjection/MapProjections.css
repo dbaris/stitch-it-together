@@ -15,15 +15,11 @@ html {
     text-align: left;
   }
   
-  .container {
-    position: absolute;
-    width: 60vw;
-  }
-  
+
   canvas {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -31,5 +27,10 @@ html {
   }
   .global-projections-canvas-container {
     display: inline-block;
+  }
+
+  .graticule path {
+    fill: none;
+    stroke: #eee;
   }
   

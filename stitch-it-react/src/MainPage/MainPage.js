@@ -5,97 +5,33 @@ import MapProjectionSVG from '../MapProjection/MapProjectionsSVG.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import {Projection, projection_options} from "./projection.js";
-import Zoom from '../Zoom.js';
+import {writeups, map_config, datasets, link_ids} from "./config.js";
 import _ from 'lodash';
-
-const NORTH_AMERICA = "north_america";
-const WORLD = "world"
-
-var link_ids = [
-    {'link_id': 'global-projections-link', 'section_id': 'map-projections'},
-    {'link_id': 'migration-link', 'section_id': 'migration'},
-    {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
-];
-
-var migration_centers = {path: "./data/estaciones_migratorias.json", color: "green", opacity: "1", name: "migration centers"};
-var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "yellow",opacity: "1", name: "ice detention centers"};
-var butterfly = {path: "./data/butterfly.json", color: "pink", opacity: ".3", name: "butterfly migration"};
-var big_lakes = {path: "./data/water/big_lakes.json", color: "blue", opacity: ".2", name: "big lakes"};
-var rivers = {path: "./data/water/rivers.json", color: "#34a1eb", opacity: ".2", name: "rivers"};
-var small_lakes = {path: "./data/water/small_lakes.json", color: "blue",opacity: ".2", name: "small lakes"}; 
-var historic_boarders = {path: "./data/historical_borders.json", color: "red", opacity: "1", name: "historical borders"};
-var undersea_cables = {path: "./data/undersea_cables.json", color: "purple", opacity: ".5", name: 'undersea cables'};
-var railroads = {path: "./data/railroads.json", color: "green", opacity: ".2", name: "railroads"};
-var pipelines =  {path: "./data/pipelines.json", color: "orange", opacity: ".8", name: "pipelines"};
-var border_crossings = {path: "./data/border_crossings.json", color: "brown", opacity: ".8", name: 'border crossings'};
-
-const migration_datasets = [butterfly, migration_centers, ice_detention_centers, railroads, historic_boarders, big_lakes, rivers, small_lakes]
-const infrastructure_datasets = [undersea_cables, pipelines, big_lakes, rivers, small_lakes, border_crossings]
-
-const datasets = {
-    "migration": migration_datasets,
-    'infrastructure': infrastructure_datasets,
-    "map-projections": []
-}
-
 
 
 
 function MainPage(props) {
 
-    var init_page = 0;
+    var init_page = 1;
 
-    const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic);
-    const p2 = new Projection('black', "Mercator", 'global-projection2', d3.geoMercator);
-    const p7 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator);
-    const p3 = new Projection('#310df2', "Mercator", 'global-projection3', d3_geo_projection.geoBonne);
-    const p4 = new Projection('black', "Miller Cylandrical", 'global-projection4', d3_geo_projection.geoMiller);
-    const p5 = new Projection('#000000', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1);
-    const p6 = new Projection('#000000', "Equirectangular", 'global-projection6', d3.geoNaturalEarth1);
+    // migration // infrastructure
+    const p1 = new Projection('#ff0000', "Orthographic", 'global-projection1', d3.geoOrthographic, "0", "1", ".5");
+    const p4 = new Projection('white', "Miller Cylandrical", 'global-projection4', d3_geo_projection.geoMiller, "0", "1", "1");
+    const p7 = new Projection('#d00df2', "Mercator", 'global-projection2', d3.geoMercator, "0", "1", ".5");
+    // map-projections
+    const p5 = new Projection('white', "Equirectangular", 'global-projection4', d3.geoNaturalEarth1, "3 3", ".5", 0);
+    const p2 = new Projection('white', "Mercator", 'global-projection2', d3.geoMercator, "2, 6, 6, 10", ".5", 0);
 
     const init_projections = {
-        "migration" : [p2],
-        "infrastructure": [p2], 
+        "migration" : [p4, p5, p2],
+        "infrastructure": [p4], 
         "map-projections": [p1, p7]
     }
 
     const [page, setPage] = useState(link_ids[init_page])
     const [projections, setProjections] = useState(init_projections[link_ids[init_page].section_id])
 
-    const map_writeup = () => {
-     return [
-        <div>
-            <p> 
-                Maps appear to be scientific documents: objective, singular points of truth that generate a sense of authority. However, every map is embedded with a set of constructed decisions that shape a particular narrative. These are not neutral decisions and neither are the images that they produce. Maps are as narrative tools that generate a particular reality, a particular truth.
-                    </p>
-            <p>
-            Earth is a spherical object. To represent this orb in flattened form, projection algorithms convert three-dimensional points to a two-dimensional representation, with different algorithms producing different representations. While some projections maintain geographic scale, others produce size distortions that dramatically under-scale some nations while enlarging others.
-            </p> 
-        </div>]
-    }
-    const migration_writeup = () => {
-        return [
-            <div>
-                <p> 
-                    Migration Writeup Here
-                </p>
-            </div>]
-    }
-    const infrastructure_writeup = () => {
-        return [
-            <div>
-                <p> 
-                    Infrastructure Writeup Here
-                </p>
-            </div>]
-    }
 
-    const writeups = {
-        "migration" : migration_writeup(),
-        "infrastructure": infrastructure_writeup(), 
-        "map-projections": map_writeup(),
-    }
-    
     useEffect( () => {
             link_ids.forEach(createToggle);
         }, [link_ids] 
@@ -103,7 +39,7 @@ function MainPage(props) {
 
         
     useEffect( () => {
-        console.log(projections)
+        // console.log(projections)
     }, [projections]
 )
 
@@ -133,8 +69,8 @@ function MainPage(props) {
         </div>
         <div className='container' id='map-projections'>
             <div id='map-projection-text'>
-                <h2>{page['section_id']}</h2>
-                <div>{writeups[page['section_id']]}</div>
+                <h2 >{page['section_id']}</h2>
+                <div key={"writeup"}>{writeups[page['section_id']]}</div>
                 <GenerateForms/>
                 <div className='sources'>
                     <p>Sources:</p>
@@ -144,20 +80,20 @@ function MainPage(props) {
                 {/********************************************* 
                                     Index 
                 *********************************************/}
-                <div>
+                {datasets[page.section_id].length >0 &&  <div>
                     <h2>Index</h2>
                     <Index/>
                 </div>
+                }
                 {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
             </div>
             {/********************************************* 
                             Map Canvas
             *********************************************/}
-            <MapProjectionSVG projections = {projections} 
-                data_type = {(page.section_id === "map-projections") ? WORLD : NORTH_AMERICA} 
+            <MapProjectionSVG 
+                projections = {projections} 
+                config = {map_config[page.section_id]}
                 dataset_paths = {datasets[page.section_id]}
-                width_multiplier = {(page.section_id === "map-projections") ? 1 : 1}
-                top = {(page.section_id === "map-projections") ? '0px' : '0px'}
                 id={"map_projections"}/>
         </div>
     </div>
@@ -180,7 +116,7 @@ function MainPage(props) {
         for(var d of ds) {
             content.push(
             <svg height="50" width="500" xmlns="http://www.w3.org/2000/svg">
-                <circle r="10" cx="20" cy="10" fill={d.color} />
+                <path d={(d.icon_function) ? d.icon_function(20, 10, 5, null): "M 15 10 L 30 10"} fill={"none"} stroke={d.color} strokeWidth={2.5} />
                 <text x="50" y="10">{d.name}</text>
             </svg>)
         }
@@ -192,10 +128,10 @@ function MainPage(props) {
         var i = 0;
         for(var p of projections) {
             content.push(
-                <form key = {p.name + "-form"}>
-                    <select id={p.form_id_tag+i} value={p.name} onChange={projectionChange}>
+                <form key = {p.name + "-form" + i}>
+                    <select key={p.name + "select"+ i} id={p.form_id_tag+i} value={p.name} onChange={projectionChange}>
                         {projection_options.map(po => {
-                                return <option key={po.name + "option"} value={po.name}>{po.name}</option> 
+                                return <option key={po.name + "option" + i} value={po.name}>{po.name}</option> 
 
                         })}
                     </select>
@@ -209,11 +145,8 @@ function MainPage(props) {
     } 
 
     function colorChange(e) {
-        console.log(e.target.id)
         let idx = parseInt(e.target.id.charAt(e.target.id.length - 1));
         let color = e.target.value
-        console.log(idx)
-        console.log(e.target.value)
         var new_projections = JSON.parse(JSON.stringify(projections))
         new_projections[idx].color = color;
         new_projections.map((p,i) => {p.projection = projections[i].projection})
@@ -232,8 +165,6 @@ function MainPage(props) {
     function projectionChange(e) {
         let idx = parseInt(e.target.id.charAt(e.target.id.length - 1));
         let name = e.target.value;
-        console.log(idx)
-        console.log(name)
         var new_projections = JSON.parse(JSON.stringify(projections))
         new_projections[idx].name = name
         new_projections[idx].description = getDescription(name)

@@ -8,14 +8,13 @@ import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2";
 
 function MapProjection(props) {
 
-    const {projections, data_type, id, dataset_paths, width_multiplier, top} = props;
-    const NORTH_AMERICA = "north_america";
-    const WORLD = "world"
+    const {projections, config, id, dataset_paths} = props;
     var outline = ({type: "Sphere"});
     const graticule = d3.geoGraticule10();
+    const data = config.data;
+    const outline_land = config.outline;
+    var width = window.screen.width * .8;
 
-    var width = window.screen.width * .49 * width_multiplier;
-    console.log(projections)
     // console.log(projections.map(p => {return fitWidth(p.projection, outline)}))
     var height = Math.max(...projections.map(p => {return fitWidth(p.projection, outline)}));
 
@@ -24,7 +23,7 @@ function MapProjection(props) {
 
     return (
         <div id={'global-projections-canvas-container'+id} className='global-projections-canvas-container'>
-            <canvas style={{top: top}} id={'global-projections-canvas'+ id} className='global-projections-canvas'></canvas>
+            <canvas id={'global-projections-canvas'+ id} className='global-projections-canvas'></canvas>
         </div> 
     );
 
@@ -44,20 +43,16 @@ function MapProjection(props) {
 
     function drawMap() {
         // resize();
-        fetch(data_type === NORTH_AMERICA ? './data/north_america.json' : './data/world.json')
+        fetch(data)
             .then((response) => response.json()
             )
             .then((json) => {
-            var world;
-            if(data_type === NORTH_AMERICA)
-                world = (data_type === NORTH_AMERICA) ? topojson.topology({land: json}) : json;
-            else
-                world = json;
+            var world = (config.topojson) ? topojson.topology({land: json}) : json;
             const land = topojson.feature(world, world.objects.land);
             // outline = land
             const canvas = document.getElementById('global-projections-canvas'+id);
             const context = canvas.getContext("2d");
-            context.canvas.width  = width / width_multiplier;
+            context.canvas.width  = width;
             context.canvas.height = height;
             context.translate(-100, -200)
             context.scale(3, 3) // Doubles size of anything draw to canvas.
@@ -96,11 +91,11 @@ function MapProjection(props) {
             var i = 0;
             for(var p of projections) {
                 // context.translate(0, (height - fitWidth(p.projection, outline)) / 2);
-                if(data_type == WORLD) {
-                    render(p.projection, p.color) 
+                if(outline_land) {
+                    render_outline(p) 
                 }
                 else {
-                    render_outline(p) 
+                    render(p.projection, p.color) 
                 }
                 if(i === 0) {
                     for(var d of dataset_paths){

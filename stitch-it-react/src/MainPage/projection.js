@@ -125,7 +125,7 @@ var projection_options = [
 ];
 
 class Projection {
-  constructor(color, name, id_tag, projection, callback) {
+  constructor(color, name, id_tag, projection, dash, stroke_opacity, fill_opacity) {
     this.color = color;
     this.name = name;
     this.id_tag = id_tag;
@@ -133,8 +133,10 @@ class Projection {
     this.description = this.getDescription(name);
     this.form_id_tag = id_tag + 'form';
     this.color_id_tag = id_tag + 'color';
-    this.line_dash = [0,0];
-    this.callback = callback;
+    this.line_dash = dash;
+    this.stroke_opacity = stroke_opacity;
+    this.fill_opacity = fill_opacity;
+    this.callback = "callback";
   }
 
   setLineDash(dash){
