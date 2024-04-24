@@ -29,7 +29,7 @@ function MapProjectionSVG(props) {
             setInterval(function () {setTimeout(function() {glitchFeatures("cables")}, getRandomInt(2000))},2000);
         }
         if(rivers && projections[0]) {
-            setInterval(function () {setTimeout(function() {subtleGlitch("river")}, getRandomInt(500))},1000);
+            setInterval(function () {setTimeout(function() {subtleGlitch("river")}, getRandomInt(500))},2500);
         }
     }, [projections])
 

@@ -57,12 +57,15 @@ html {
   #title-text {
     display: absolute;
     left: 2vw;
+    font-size: 24px;
+    font-weight: bolder;
   }
 
   #title-heading {
     position: absolute;
     bottom: 2vh;
     left: 2vw;
+    font-size: 24px;
   }
   
   select {
