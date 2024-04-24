@@ -34,9 +34,9 @@ const map_writeup = () => {
    }
 
    var link_ids = [
-    {'link_id': 'global-projections-link', 'section_id': 'map-projections'},
-    {'link_id': 'migration-link', 'section_id': 'migration'},
-    {'link_id': 'infrastructure-link', 'section_id': 'infrastructure'}
+    {'link_id': 'global-projections-link', 'section_id': 'map-projections', title: "Map Projections"},
+    {'link_id': 'migration-link', 'section_id': 'migration', title: "Migration" },
+    {'link_id': 'infrastructure-link', 'section_id': 'infrastructure', title: "Infrastructure"}
 ];
 
 const xGeo = (x1, y1, i, p) => {let x=x1; let y=y1; if(p) { x = p([x1,y1])[0]; y = p([x1,y1])[1];}
