@@ -14,7 +14,7 @@ const map_writeup = () => {
        return [
            <div>
                <p> 
-                   Migration Writeup Here
+               North America is a deeply connected infrastructural region. Infrastructure encompasses the systems that enable the movement of people, goods, and information. Its components trace the built environment and include connection mechanisms like roads, railways, watersheds, oil pipelines, and undersea cables. These systems allow for travel, digital communication, food systems transportation, access to drinking water, and availability of energy. Understanding infrastructural systems helps to loosen binary ways of thinking: natural and man-made, digital and physical, one country and another. For infrastructural networks, the border is not so much a barrier as a site of negotiation. Each of these systems finds a way to traverse the border and enable connection. These networks are constantly evolving and growing, adapting to new technologies and the always changing needs of people across North America's landscape.
                </p>
            </div>]
    }
@@ -22,7 +22,7 @@ const map_writeup = () => {
        return [
            <div>
                <p> 
-                   Infrastructure Writeup Here
+               Instead of a land mass partitioned by nation states, what if we re-conceived of North America as a migratory region, one connected by systems and flows? The border line itself is a historical concept, one that has shifted over time. Though today's border feels permanent, it is in fact just one of many border lines and will inevitably change again and again and again. People cross these borders in astonishing numbers every day as they go to work, visit friends and family, and vacation across arbitrary lines. Though there are marked border crossing checkpoints, there are also moments where people cross the border at unknown points, unaccounted for and unknown by US Department of Transportation Statistics. Across the US and Mexico, an international network of detention centers and estaciones migratorias diffuses and operationalizes the border beyond the linear boundary. While the movement of people may be stopped at the border line, other non-humans are able to fly across and seep below. This map also includes the movement of monarch butterflies and watershed systems as a reminder that ecological systems are meant to migrate, shift, and flow.
                </p>
            </div>]
    }

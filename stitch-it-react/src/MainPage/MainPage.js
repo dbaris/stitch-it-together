@@ -71,7 +71,7 @@ function MainPage(props) {
             <div id='map-projection-text'>
                 <h2 >{page['section_id']}</h2>
                 <div key={"writeup"}>{writeups[page['section_id']]}</div>
-                <GenerateForms/>
+                {page.section_id === "map-projections" && <GenerateForms/> }
                 <div className='sources'>
                     <p>Sources:</p>
                     <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>

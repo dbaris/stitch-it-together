@@ -84,7 +84,7 @@ function MapProjectionSVG(props) {
         // ---
         for(var p of projections) {
             // .scale(550).translate([1570, 1100])
-            if(config.outline) {p.projection.center([-120, 75]).scale(600)}
+            if(config.outline) {p.projection.center([-120, 65]).scale(550)}
             var map = "g.map"+i
             var geoGenerator = d3.geoPath(p.projection)
             update(geoGenerator, land, p, map)
