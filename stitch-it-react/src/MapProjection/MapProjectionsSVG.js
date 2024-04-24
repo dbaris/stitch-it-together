@@ -19,14 +19,14 @@ function MapProjectionSVG(props) {
         drawMap();
         // create glitch effects 
         let bm = _.find(dataset_paths, p => p.name === "Butterfly Migration")
-        let pipes = _.find(dataset_paths, p => p.name === "Pipelines")
+        let pipes = _.find(dataset_paths, p => p.name === "Undersea Cables")
         let rivers = _.find(dataset_paths, p => p.name === "Rivers")
 
         if(bm && projections[0]) {
             setInterval(function () {setTimeout(function() {glitchFeatures("butterfly")}, getRandomInt(2000))},2000);
         }
         if(pipes && projections[0]) {
-            setInterval(function () {setTimeout(function() {glitchFeatures("pipelines")}, getRandomInt(2000))},2000);
+            setInterval(function () {setTimeout(function() {glitchFeatures("cables")}, getRandomInt(2000))},2000);
         }
         if(rivers && projections[0]) {
             setInterval(function () {setTimeout(function() {subtleGlitch("river")}, getRandomInt(500))},1000);
