@@ -115,6 +115,9 @@ function MainPage(props) {
         var ds = datasets[page.section_id]
         var content = []
         for(var d of ds) {
+            if(d.name === "Big Lakes") {
+                continue;
+            }
             content.push(
             <svg height="50" width="500" xmlns="http://www.w3.org/2000/svg">
                 <path d={(d.icon_function) ? d.icon_function(20, 10, 5, null): "M 15 10 L 30 10"} fill={"none"} stroke={d.color} strokeWidth={2.5} />

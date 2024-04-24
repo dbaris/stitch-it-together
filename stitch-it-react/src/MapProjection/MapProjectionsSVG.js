@@ -134,7 +134,7 @@ function MapProjectionSVG(props) {
                 .attr("r", 5)
                 .attr('cx', d => projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0])
                 .attr('cy', d =>  projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1])
-                .style("fill", "none")
+                .style("fill", d => features.fill ? color : "none")
                 .style("stroke", color)
                 .style("stroke-width", 2)
         } 
@@ -143,7 +143,7 @@ function MapProjectionSVG(props) {
                 .datum({type: "FeatureCollection", features: features.data.features})
                 .append('path')
                 .attr("d", d3.geoPath(projection))
-                .style("fill", "none")
+                .style("fill", d => features.fill ? color : "none")
                 .style("stroke", d => { return color})
                 .style("opacity", features.opacity)
         }
