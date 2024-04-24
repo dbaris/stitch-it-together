@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import "./MainPage.css"
-import MapProjection from '../MapProjection/MapProjections.js';
 import MapProjectionSVG from '../MapProjection/MapProjectionsSVG.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
@@ -28,7 +27,7 @@ function MainPage(props) {
         "map-projections": [p1, p7]
     }
 
-    const [page, setPage] = useState(link_ids[init_page])
+    const [page, setPage] = useState(null)
     const [projections, setProjections] = useState(init_projections[link_ids[init_page].section_id])
 
 
@@ -45,7 +44,7 @@ function MainPage(props) {
 
 
     return (
-        <div className='outer'>
+    <div className='outer'>
             {/********************************************* 
                                 Nav Menu
             *********************************************/}
@@ -53,50 +52,54 @@ function MainPage(props) {
             <div id='title-text'>
                 <h1>Stitch It Together: CounterMapping</h1>
                 <div></div>
-                <div><h2 style = {(page.link_id == 'global-projections-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                <div><h2 style = {(page && page.link_id == 'global-projections-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='global-projections-link'>1</h2></div>
-                <div><h2 style = {(page.link_id == 'migration-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                <div><h2 style = {( page &&  page.link_id == 'migration-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='migration-link'>2</h2></div>
-                <div><h2 style = {(page.link_id == 'infrastructure-link') ? {color: 'rgb(255,0,255)'} : {}} 
+                <div><h2 style = {( page && page.link_id == 'infrastructure-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='infrastructure-link'>3</h2></div>
             </div>
         </div>
         {/********************************************* 
                     Write Up & Forms
         *********************************************/}
-        <div id='source-code'>
-            <a href='https://github.com/dbaris/stitch-it-together'>Source Code</a>
-        </div>
-        <div className='container' id='map-projections'>
-            <div id='map-projection-text'>
-                <h2 >{page['title']}</h2>
-                <div key={"writeup"}>{writeups[page['section_id']]}</div>
-                {page.section_id === "map-projections" && <GenerateForms/> }
-                {page.section_id === "map-projections" &&
-                <div className='sources'>
-                    <p>Sources:</p>
-                    <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>
-                    <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
-                </div> }
-                {/********************************************* 
-                                    Index 
-                *********************************************/}
-                {datasets[page.section_id].length >0 &&  <div>
-                    <h2>Index</h2>
-                    <Index/>
-                </div>
-                }
-                {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
+        { page &&
+        <div>
+            <div id='source-code'>
+                <a href='https://github.com/dbaris/stitch-it-together'>Source Code</a>
             </div>
-            {/********************************************* 
-                            Map Canvas
-            *********************************************/}
-            <MapProjectionSVG 
-                projections = {projections} 
-                config = {map_config[page.section_id]}
-                dataset_paths = {datasets[page.section_id]}
-                id={"map_projections"}/>
+            <div className='container' id='map-projections'>
+                <div id='map-projection-text'>
+                    <h2 >{page['title']}</h2>
+                    <div key={"writeup"}>{writeups[page['section_id']]}</div>
+                    {page.section_id === "map-projections" && <GenerateForms/> }
+                    {page.section_id === "map-projections" &&
+                    <div className='sources'>
+                        <p>Sources:</p>
+                        <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>
+                        <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
+                    </div> }
+                    {/********************************************* 
+                                        Index 
+                    *********************************************/}
+                    {datasets[page.section_id].length >0 &&  <div>
+                        <h2>Index</h2>
+                        <Index/>
+                    </div>
+                    }
+                    {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
+                </div>
+                {/********************************************* 
+                                Map Canvas
+                *********************************************/}
+                <MapProjectionSVG 
+                    projections = {projections} 
+                    config = {map_config[page.section_id]}
+                    dataset_paths = {datasets[page.section_id]}
+                    id={"map_projections"}/>
+            </div>
         </div>
+        }
     </div>
 
     );

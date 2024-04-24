@@ -123,6 +123,8 @@ function MapProjectionSVG(props) {
                 .style("fill", d => features.fill ? color : "none")
                 .style("stroke", d => { return color})
                 .style("opacity", features.opacity)
+                .style("stroke-dasharray", d => (features.dash) ? features.dash : "0")
+                .style("stroke-width", 2)
         }
         
     }

@@ -15,7 +15,7 @@ html {
   }
   
   h1 {
-    font-family: "Gelica",'Times New Roman', Times, serif;
+    font-family: "Arial" !important;
     font-size: 24px;
     color: rgb(255,0,255);
     text-align: left;
@@ -25,6 +25,14 @@ html {
     color: #2c3387;
     font-family: "Gelica", 'Times New Roman', Times, serif;
     text-align: left;
+  }
+  
+  h3 {
+    color: #658c5d;
+    /* font-family: "Gelica", 'Times New Roman', Times, serif; */
+    font-family: "variex", 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 36px;
   }
   
   a {
