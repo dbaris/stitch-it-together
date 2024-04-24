@@ -68,9 +68,9 @@ const datasets = {
 }
 
 const map_config = {
-    "migration": {"data": './data/north_america.json', "topojson":true, outline: true, name: "Migration"},
-    'infrastructure': {"data": './data/north_america.json', "topojson":true, outline: true, name: "Infrastructure"},
-    "map-projections": {"data": './data/world.json', "topojson":false, outline: false, name: "Map Projections"}
+    "migration": {"data": './data/north_america.json', "topojson":true, outline: true, name: "Migration", width: ".65"},
+    'infrastructure': {"data": './data/north_america.json', "topojson":true, outline: true, name: "Infrastructure",  width: ".65" },
+    "map-projections": {"data": './data/world.json', "topojson":false, outline: false, name: "Map Projections",  width: ".55"}
 }
 
 export {writeups, map_config, datasets, link_ids}
