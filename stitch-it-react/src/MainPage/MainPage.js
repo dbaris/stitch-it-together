@@ -51,8 +51,6 @@ function MainPage(props) {
         {/* position absolute */}
         <div id='title'>
             <div id='title-text'>
-                <h1>Stitch It Together: CounterMapping</h1>
-                <div></div>
                 <div><h2 style = {(page && page.link_id == 'global-projections-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='global-projections-link'>1</h2></div>
                 <div><h2 style = {( page &&  page.link_id == 'migration-link') ? {color: 'rgb(255,0,255)'} : {}} 
@@ -60,6 +58,9 @@ function MainPage(props) {
                 <div><h2 style = {( page && page.link_id == 'infrastructure-link') ? {color: 'rgb(255,0,255)'} : {}} 
                     className='page-link' id='infrastructure-link'>3</h2></div>
             </div>
+        </div>
+        <div id="title-heading">
+            <h1>Stitch It Together: CounterMapping</h1>
         </div>
         {/********************************************* 
                     Write Up & Forms

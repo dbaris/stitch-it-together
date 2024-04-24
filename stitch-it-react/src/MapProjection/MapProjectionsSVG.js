@@ -17,6 +17,7 @@ function MapProjectionSVG(props) {
 
     useEffect( () => {
         drawMap();
+        // create glitch effects 
         let bm = _.find(dataset_paths, p => p.name === "Butterfly Migration")
         let pipes = _.find(dataset_paths, p => p.name === "Pipelines")
         if(bm && projections[0]) {
@@ -78,8 +79,8 @@ function MapProjectionSVG(props) {
         d3.selectAll(`.${classname}`)
                 .style("opacity", d => {
                     let i = getRandomInt(100)
-                    if(i < 50) {
-                        return .3;
+                    if(i < 80) {
+                        return 0;
                     }
                     return 1;
                 })

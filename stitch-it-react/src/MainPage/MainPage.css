@@ -34,6 +34,8 @@ html {
     text-align: left;
     font-size: 36px;
   }
+
+
   
   a {
     color: #00B7FF;
@@ -47,13 +49,20 @@ html {
   #title {
     z-index: 1;
     position: absolute;
-    margin-left: 3vw;
+    left: 2vw;
+    top: 2vh;
+    /* margin-left: 3vw; */
   }
   
   #title-text {
     display: absolute;
-    bottom: 5vh;
-    left: 5vh;
+    left: 2vw;
+  }
+
+  #title-heading {
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
   }
   
   select {
