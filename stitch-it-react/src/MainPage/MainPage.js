@@ -45,9 +45,10 @@ function MainPage(props) {
 
     return (
     <div className='outer'>
-            {/********************************************* 
-                                Nav Menu
-            *********************************************/}
+        {/********************************************* 
+                            Nav Menu
+        *********************************************/}
+        {/* position absolute */}
         <div id='title'>
             <div id='title-text'>
                 <h1>Stitch It Together: CounterMapping</h1>
@@ -64,41 +65,46 @@ function MainPage(props) {
                     Write Up & Forms
         *********************************************/}
         { page &&
-        <div>
-            <div id='source-code'>
-                <a href='https://github.com/dbaris/stitch-it-together'>Source Code</a>
-            </div>
-            <div className='container' id='map-projections'>
-                <div id='map-projection-text'>
-                    <h2 >{page['title']}</h2>
-                    <div key={"writeup"}>{writeups[page['section_id']]}</div>
-                    {page.section_id === "map-projections" && <GenerateForms/> }
-                    {page.section_id === "map-projections" &&
-                    <div className='sources'>
-                        <p>Sources:</p>
-                        <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>
-                        <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
-                    </div> }
-                    {/********************************************* 
-                                        Index 
-                    *********************************************/}
-                    {datasets[page.section_id].length >0 &&  <div>
-                        <h2>Index</h2>
-                        <Index/>
-                    </div>
-                    }
-                    {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
+            <div>
+                {/* position absolute */}
+                <div id='source-code'>
+                    <a href='https://github.com/dbaris/stitch-it-together'>Source Code</a>
                 </div>
-                {/********************************************* 
-                                Map Canvas
-                *********************************************/}
-                <MapProjectionSVG 
-                    projections = {projections} 
-                    config = {map_config[page.section_id]}
-                    dataset_paths = {datasets[page.section_id]}
-                    id={"map_projections"}/>
+                <div id="left">
+                    <div className='container' id='map-projections'>
+                        <div id='map-projection-text'>
+                            <h2 >{page['title']}</h2>
+                            <div key={"writeup"}>{writeups[page['section_id']]}</div>
+                            {page.section_id === "map-projections" && <GenerateForms/> }
+                            {page.section_id === "map-projections" &&
+                            <div className='sources'>
+                                <p>Sources:</p>
+                                <a href="https://observablehq.com/@d3/projection-comparison">Observable Projection Comparison Tutorial</a>
+                                <p>Snyder, John. Map Projections: A Working Manual. US GPO, 1987.</p>
+                            </div> }
+                            {/********************************************* 
+                                                Index 
+                            *********************************************/}
+                            {datasets[page.section_id].length >0 &&  <div>
+                                <h2>Index</h2>
+                                <Index/>
+                            </div>
+                            }
+                            {/* <Zoom canvasWidth='600' canvasHeight='400'/> */}
+                        </div>
+                    </div>
+                </div>
+                <div id="right">
+                    {/********************************************* 
+                                    Map Canvas
+                    *********************************************/}
+                    <MapProjectionSVG 
+                        projections = {projections} 
+                        config = {map_config[page.section_id]}
+                        dataset_paths = {datasets[page.section_id]}
+                        id={"map_projections"}/>
+                </div>
             </div>
-        </div>
         }
     </div>
 
