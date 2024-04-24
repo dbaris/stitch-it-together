@@ -11,7 +11,7 @@ function MapProjectionSVG(props) {
     const {projections, config, id, dataset_paths} = props;
     const graticule = d3.geoGraticule10();
     const outline = ({type: "Sphere"});
-    var width = window.screen.width * .55;
+    var width = window.screen.width * .6;
     var map_data;
 
     var height = (!config.outline) ?  Math.max(...projections.map(p => {return fitWidth(p.projection, outline)})) : window.screen.height;
