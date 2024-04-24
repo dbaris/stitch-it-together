@@ -23,7 +23,8 @@ function MapProjectionSVG(props) {
     return (
         <div id={'global-projections-canvas-container'+id} className='global-projections-canvas-container'>
           <svg width={width} height={height}>
-          <g class="graticule"><path></path></g>
+          {!config.outline && <g class="graticule0"><path></path></g>}
+          {!config.outline && <g class="graticule1"><path></path></g>}
           {/* <g class="circles"></g> */}
           <g class="map1"></g>
           <g class="map2"></g>
@@ -34,9 +35,17 @@ function MapProjectionSVG(props) {
         
     );
 
-    function update(geoGenerator, geojson, p, map) {
+    function update(geoGenerator, geojson, p, i) {
 
-        let u = d3.select(map)
+        // Update graticule
+        d3.select('.graticule'+i + ' path')
+        .datum(graticule)
+        .attr('d', geoGenerator)
+        .style("stroke", p.color)
+        .style("fill", "none")
+        .style("opacity", d => (config.outline) ? 0 : .5)
+
+        let u = d3.select("g.map"+i)
         .selectAll('path')
         .data(geojson.features)
         u.enter()
@@ -49,12 +58,6 @@ function MapProjectionSVG(props) {
         .style("stroke-dasharray", p.line_dash)
         .attr("stroke-opacity", p.stroke_opacity);
 
-          // Update graticule
-
-        d3.select('.graticule path')
-        .datum(graticule)
-        .attr('d', geoGenerator)
-        .style("fill", p.color)
 
     }
 
@@ -85,9 +88,8 @@ function MapProjectionSVG(props) {
         for(var p of projections) {
             // .scale(550).translate([1570, 1100])
             if(config.outline) {p.projection.center([-120, 65]).scale(550)}
-            var map = "g.map"+i
             var geoGenerator = d3.geoPath(p.projection)
-            update(geoGenerator, land, p, map)
+            update(geoGenerator, land, p, i)
             if(i === 0) {
                 for(var d of dataset_paths){
                     renderFeatureCollection(d, p.projection, d.color)
