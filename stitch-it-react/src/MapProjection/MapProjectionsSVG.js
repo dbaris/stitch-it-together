@@ -4,6 +4,7 @@ import "./MapProjections.css"
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as d3_geo_projection from "https://cdn.skypack.dev/d3-geo-projection@4";
 import * as topojson from "https://cdn.skypack.dev/topojson@3.0.2"; 
+import _ from 'lodash';
 
 
 function MapProjectionSVG(props) {
@@ -14,10 +15,22 @@ function MapProjectionSVG(props) {
     var width = window.screen.width * .6;
     var map_data;
 
+    useEffect( () => {
+        drawMap();
+        let bm = _.find(dataset_paths, p => p.name === "Butterfly Migration")
+        let pipes = _.find(dataset_paths, p => p.name === "Pipelines")
+        if(bm && projections[0]) {
+            setInterval(function () {setTimeout(function() {glitchFeatures("butterfly")}, getRandomInt(2000))},2000);
+        }
+        if(pipes && projections[0]) {
+            // setInterval(function () {setTimeout(function() {glitchFeatures("pipelines")}, getRandomInt(2000))},2000);
+        }
+    }, [projections])
+
+
     var height = (!config.outline) ?  Math.max(...projections.map(p => {return fitWidth(p.projection, outline)})) : window.screen.height;
     // var height = window.screen.height;
 
-    drawMap();
 
 
     return (
@@ -57,8 +70,61 @@ function MapProjectionSVG(props) {
         .style("stroke", d => (config.outline) ? "black" : p.color) 
         .style("stroke-dasharray", p.line_dash)
         .attr("stroke-opacity", p.stroke_opacity);
+    }
 
+    function glitchFeatures(classname) {
+        // console.log(`glitch features ${classname}`)
+        // console.log(d3.selectAll(`.${classname}`))
+        d3.selectAll(`.${classname}`)
+                .style("opacity", d => {
+                    let i = getRandomInt(100)
+                    if(i < 50) {
+                        return .3;
+                    }
+                    return 1;
+                })
+    }
 
+    function renderFeatures(features, projection, color) {
+        
+        if(features.icon_function) {
+            console.log(features.classname)
+            d3.select("g.map0")
+                .selectAll(`.${features.classname}`)
+                .data(features.data.features)
+                .enter()
+                .append("path")
+                .attr('class', (d) => `${features.classname}`)
+                // .attr("d", "M 0 20 L 100 205 M 100 400 L 0 0")
+                .attr("d", d => {
+                    let line = features.icon_function(d.geometry.coordinates[0], d.geometry.coordinates[1], 5, projection)
+                    return line;
+                }) 
+                .attr("r", 5)
+                .attr('cx', d => projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0])
+                .attr('cy', d =>  projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1])
+                .style("fill", d => features.fill ? color : "none")
+                .style("stroke", color)
+                .style("opacity", d => {
+                    let i = getRandomInt(100)
+                    if(i < 30) {
+                        return .3;
+                    }
+                    return 1;
+                })
+                .style("stroke-width", 2)
+        } 
+        else {
+            d3.select("g.map0")
+                .datum({type: "FeatureCollection", features: features.data.features})
+                .append('path')
+                .attr('class', (d) => `${features.classname}`)
+                .attr("d", d3.geoPath(projection))
+                .style("fill", d => features.fill ? color : "none")
+                .style("stroke", d => { return color})
+                .style("opacity", features.opacity)
+        }
+        
     }
 
 
@@ -117,38 +183,7 @@ function MapProjectionSVG(props) {
         }
     }
 
-    function renderFeatures(features, projection, color) {
-        const path = d3.geoPath(projection);
-        if(features.icon_function) {
-            d3.select("g.map0")
-                .selectAll("path")
-                .data(features.data.features)
-                .enter()
-                .append("path")
-                // .attr("d", "M 0 20 L 100 205 M 100 400 L 0 0")
-                .attr("d", d => {
-                    let xy = projection([d.geometry.coordinates[0], d.geometry.coordinates[1]]);
-                    let line = features.icon_function(d.geometry.coordinates[0], d.geometry.coordinates[1], 5, projection)
-                    return line;
-                }) 
-                .attr("r", 5)
-                .attr('cx', d => projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0])
-                .attr('cy', d =>  projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1])
-                .style("fill", d => features.fill ? color : "none")
-                .style("stroke", color)
-                .style("stroke-width", 2)
-        } 
-        else {
-            d3.select("g.map0")
-                .datum({type: "FeatureCollection", features: features.data.features})
-                .append('path')
-                .attr("d", d3.geoPath(projection))
-                .style("fill", d => features.fill ? color : "none")
-                .style("stroke", d => { return color})
-                .style("opacity", features.opacity)
-        }
-        
-    }
+    
     
  
     function fitWidth(projection, outline) {
@@ -157,6 +192,10 @@ function MapProjectionSVG(props) {
         projection.scale(projection.scale() * (l - 1) / l).precision(0.2);
         return dy;
     }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
 
 }
 

@@ -45,19 +45,19 @@ const triangleGeo = (x1, y1, i, p) => { let x=x1; let y=y1; if(p) { x = p([x1,y1
 const verticalLineSerifGeo = (x1, y1, i, p) => { let x=x1; let y=y1; if(p) { x = p([x1,y1])[0]; y = p([x1,y1])[1];} return `M ${x} ${y+i} L ${x}  ${y-i} M ${x-(i/2)} ${y+i} L ${x+(i/2)} ${y+i}  M ${x-(i/2)} ${y-i} L ${x+(i/2)} ${y-i}`}
 const horizontalLineSerifGeo = (x1, y1, i, p) => { let x=x1; let y=y1; if(p) { x = p([x1,y1])[0]; y = p([x1,y1])[1];} return ` M ${x+i} ${y} L ${x-i} ${y} M ${x+i} ${y+(i/2)} L ${x+i} ${y-(i/2)} M ${x-i} ${y-(i/2)} L ${x-i} ${y+(i/2)}`}
 
-var migration_centers = {path: "./data/estaciones_migratorias.json", color: " #ec008c", opacity: "1", name: "Migration Centers", fill: false, icon_function: horizontalLineSerifGeo};
-var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "#a00a15",opacity: "1", name: "Ice Detention Centers", fill: false, icon_function: verticalLineSerifGeo};
-var butterfly = {path: "./data/butterfly.json", color: " #e6ac21", opacity: ".8", name: "Butterfly Migration", fill: false, icon_function: xGeo};
-var big_lakes = {path: "./data/water/big_lakes.json", color: "#2a338a", opacity: ".8", name: "Big Lakes", fill: true};
-var rivers = {path: "./data/water/rivers.json", color: " #658d5d", opacity: ".4", name: "Rivers", fill: false};
-var small_lakes = {path: "./data/water/small_lakes.json", color: "#2a338a",opacity: ".8", name: "Lakes", fill: true}; 
-var historic_boarders = {path: "./data/historical_borders.json", color: "#658d5d", opacity: "1", name: "Historical Borders", fill: false};
-var undersea_cables = {path: "./data/undersea_cables.json", color: " #ec008c", opacity: ".8", name: 'Undersea Cables', fill: false};
-var railroads = {path: "./data/railroads.json", color: "green", opacity: ".5", name: "Railroads", fill: false};
-var pipelines =  {path: "./data/pipelines.json", color: "#e6ac21", opacity: ".8", name: "Pipelines", fill: false};
-var border_crossings = {path: "./data/border_crossings.json", color: "#a00a15", opacity: ".8", name: 'Border Crossings', fill: false, icon_function: triangleGeo};
+var migration_centers = {path: "./data/estaciones_migratorias.json", color: " #ec008c", opacity: "1", name: "Migration Centers", fill: false, icon_function: horizontalLineSerifGeo, classname: "migration"};
+var ice_detention_centers = {path: "./data/ice_detention_centers.json", color: "#a00a15",opacity: "1", name: "Ice Detention Centers", fill: false, icon_function: verticalLineSerifGeo, classname: "ice"};
+var butterfly = {path: "./data/butterfly.json", color: " #e6ac21", opacity: ".8", name: "Butterfly Migration", fill: false, icon_function: xGeo, classname: "butterfly"};
+var big_lakes = {path: "./data/water/big_lakes.json", color: "#2a338a", opacity: ".8", name: "Big Lakes", fill: true , classname: "lake"};
+var rivers = {path: "./data/water/rivers.json", color: " #658d5d", opacity: ".4", name: "Rivers", fill: false , classname: "river"};
+var small_lakes = {path: "./data/water/small_lakes.json", color: "#2a338a",opacity: ".8", name: "Lakes", fill: true , classname: "lake"}; 
+var historic_boarders = {path: "./data/historical_borders.json", color: "#658d5d", opacity: "1", name: "Historical Borders", fill: false, classname: "border"};
+var undersea_cables = {path: "./data/undersea_cables.json", color: " #ec008c", opacity: ".8", name: 'Undersea Cables', fill: false, classname: "cables"};
+var railroads = {path: "./data/railroads.json", color: "green", opacity: ".5", name: "Railroads", fill: false, classname: "railroads"};
+var pipelines =  {path: "./data/pipelines.json", color: "#e6ac21", opacity: ".8", name: "Pipelines", fill: false , classname: "pipelines"};
+var border_crossings = {path: "./data/border_crossings.json", color: "#a00a15", opacity: ".8", name: 'Border Crossings', fill: false, icon_function: triangleGeo, classname: "crossings"};
 
-const migration_datasets = [migration_centers, ice_detention_centers, historic_boarders, butterfly]
+const migration_datasets = [migration_centers, ice_detention_centers, historic_boarders, butterfly, big_lakes, small_lakes, rivers]
 const infrastructure_datasets = [undersea_cables, pipelines, big_lakes, rivers, small_lakes, border_crossings]
 
 const datasets = {
@@ -67,9 +67,9 @@ const datasets = {
 }
 
 const map_config = {
-    "migration": {"data": './data/north_america.json', "topojson":true, outline: true},
-    'infrastructure': {"data": './data/north_america.json', "topojson":true, outline: true},
-    "map-projections": {"data": './data/world.json', "topojson":false, outline: false}
+    "migration": {"data": './data/north_america.json', "topojson":true, outline: true, name: "Migration"},
+    'infrastructure': {"data": './data/north_america.json', "topojson":true, outline: true, name: "Infrastructure"},
+    "map-projections": {"data": './data/world.json', "topojson":false, outline: false, name: "Map Projections"}
 }
 
 export {writeups, map_config, datasets, link_ids}
