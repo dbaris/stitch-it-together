@@ -52,7 +52,7 @@ var big_lakes = {path: "./data/water/big_lakes.json", color: "#2a338a", opacity:
 var rivers = {path: "./data/water/rivers.json", color: " #658d5d", opacity: ".4", name: "Rivers", fill: false , classname: "river"};
 var small_lakes = {path: "./data/water/small_lakes.json", color: "#2a338a",opacity: ".8", name: "Lakes", fill: true , classname: "lake"}; 
 
-var historic_boarders = {path: "./data/historical_borders.json", color: "#658d5d", opacity: "1", name: "Historical Borders", fill: false, classname: "border", dash: "3 3"};
+var historic_boarders = {path: "./data/historical_borders.json", color: "#658d5d", opacity: "1", name: "Historical Borders", fill: false, classname: "border", dash: "3 3", strokeWidth: "2.5"};
 var undersea_cables = {path: "./data/undersea_cables.json", color: " #ec008c", opacity: ".8", name: 'Undersea Cables', fill: false, classname: "cables"};
 var railroads = {path: "./data/railroads.json", color: "green", opacity: ".5", name: "Railroads", fill: false, classname: "railroads"};
 var pipelines =  {path: "./data/pipelines.json", color: "#e6ac21", opacity: ".8", name: "Pipelines", fill: false , classname: "pipelines"};

@@ -20,11 +20,16 @@ function MapProjectionSVG(props) {
         // create glitch effects 
         let bm = _.find(dataset_paths, p => p.name === "Butterfly Migration")
         let pipes = _.find(dataset_paths, p => p.name === "Pipelines")
+        let rivers = _.find(dataset_paths, p => p.name === "Rivers")
+
         if(bm && projections[0]) {
             setInterval(function () {setTimeout(function() {glitchFeatures("butterfly")}, getRandomInt(2000))},2000);
         }
         if(pipes && projections[0]) {
-            // setInterval(function () {setTimeout(function() {glitchFeatures("pipelines")}, getRandomInt(2000))},2000);
+            setInterval(function () {setTimeout(function() {glitchFeatures("pipelines")}, getRandomInt(2000))},2000);
+        }
+        if(rivers && projections[0]) {
+            setInterval(function () {setTimeout(function() {subtleGlitch("river")}, getRandomInt(500))},1000);
         }
     }, [projections])
 
@@ -79,14 +84,43 @@ function MapProjectionSVG(props) {
         d3.selectAll(`.${classname}`)
                 .style("opacity", d => {
                     let i = getRandomInt(100)
-                    if(i < 80) {
+                    if(i < 20) {
                         return 0;
                     }
                     return 1;
                 })
+                .attr("transform", d => {
+                    let i = getRandomInt(100)
+                    if(i < 20) {
+                        let ii = getRandomPosNegInt(8)
+                        let iii = getRandomPosNegInt(3)
+                        return `translate(${ii}, ${iii})`;
+                    }
+                    return `translate(0, 0)`;
+                })
+    }
+    function subtleGlitch(classname) {
+        d3.selectAll(`.${classname}`)
+            .attr("transform", d => {
+                let i = getRandomInt(100)
+                if(i < 20) {
+                    let ii = getRandomPosNegInt(10)* .1
+                    let iii = getRandomPosNegInt(10) * .1
+                    return `translate(${ii}, ${iii})`;
+                }
+                return `translate(0, 0)`;
+            })
+            .style("opacity", d => {
+                let i = getRandomInt(100)
+                if(i < 20) {
+                    return .3;
+                }
+                return .6;
+            })
     }
 
     function renderFeatures(features, projection, color) {
+        // console.log(features);
         
         if(features.icon_function) {
             console.log(features.classname)
@@ -106,26 +140,36 @@ function MapProjectionSVG(props) {
                 .attr('cy', d =>  projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1])
                 .style("fill", d => features.fill ? color : "none")
                 .style("stroke", color)
-                .style("opacity", d => {
-                    let i = getRandomInt(100)
-                    if(i < 30) {
-                        return .3;
-                    }
-                    return 1;
-                })
+                .style("opacity", 1)
                 .style("stroke-width", 2)
         } 
         else {
-            d3.select("g.map0")
-                .datum({type: "FeatureCollection", features: features.data.features})
-                .append('path')
-                .attr('class', (d) => `${features.classname}`)
-                .attr("d", d3.geoPath(projection))
-                .style("fill", d => features.fill ? color : "none")
-                .style("stroke", d => { return color})
-                .style("opacity", features.opacity)
-                .style("stroke-dasharray", d => (features.dash) ? features.dash : "0")
-                .style("stroke-width", 2)
+
+            // reader as individual features -- more easily to manipulate 
+            for(var f of features.data.features) {
+                d3.select("g.map0")
+                    .append('path')
+                    .attr("d", d3.geoPath(projection)(f))
+                    .attr('class', (d) => `${features.classname}`)
+                    .style("fill", d => features.fill ? color : "none")
+                    .style("stroke", d => { console.log(d); return color;})
+                    .style("opacity", features.opacity)
+                    .style("stroke-dasharray", d => (features.dash) ? features.dash : "0")
+                    .style("stroke-width", d => (features.strokeWidth) ? features.strokeWidth : 1)
+            }
+            //render as one entity -- could be faster ???
+
+            // d3.select("g.map0")
+            //     .datum({type: "FeatureCollection", features: features.data.features})
+            //     .append('path')
+            //     .attr('class', (d) => `${features.classname}`)
+            //     .attr("d", d3.geoPath(projection))
+            //     .style("fill", d => features.fill ? color : "none")
+            //     .style("stroke", d => { console.log(d); return color;})
+            //     .style("opacity", features.opacity)
+            //     .style("stroke-dasharray", d => (features.dash) ? features.dash : "0")
+            //     .style("stroke-width", 2)
+            
         }
         
     }
@@ -199,6 +243,12 @@ function MapProjectionSVG(props) {
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
+
+    function getRandomPosNegInt(max) {
+        var num = Math.floor(Math.random()*max) + 1; // this will get a number between 1 and 99;
+        num *= Math.round(Math.random()) ? 1 : -1; // this will add minus sign in 50% of cases
+        return num;
+    }
 
 }
 
