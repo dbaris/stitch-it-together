@@ -60,7 +60,7 @@ function MainPage(props) {
             </div>
         </div>
         <div id="title-heading">
-            <h1>Stitch It Together: CounterMapping</h1>
+            <h1>STITCH IT TOGETHER: <span id="subtitle">COUNTERMAPPING</span></h1>
         </div>
         {/********************************************* 
                     Write Up & Forms

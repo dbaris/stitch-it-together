@@ -17,8 +17,14 @@ html {
   h1 {
     font-family: "Gelica",'Times New Roman', Times, serif;
     font-size: 24px;
-    color: rgb(255,0,255);
+    color: #2c3387;
     text-align: left;
+  }
+
+  #subtitle {
+    color: #ff00ff;
+    font-family: "Elza", Helvetica, Arial, sans-serif;
+    font-style: italic;
   }
   
   h2 {
