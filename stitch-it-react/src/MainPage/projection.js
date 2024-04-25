@@ -101,7 +101,7 @@ var all_projections = [
     {name: "Winkel tripel", value: d3_geo_projection.geoWinkel3}
 ];
 
-var projections = [
+var projection_options = [
   {name: "Bonne", value: d3_geo_projection.geoBonne, description: "Developed in the early 16th century, \
   the Bonne projection is an equal-area representation. Though the central meridian is a straight line, \
   all other parallels become complex curves. Distortion grows moving away from the central parallels."},
@@ -125,7 +125,7 @@ var projections = [
 ];
 
 class Projection {
-  constructor(color, name, id_tag, projection, callback) {
+  constructor(color, name, id_tag, projection, dash, stroke_opacity, fill_opacity) {
     this.color = color;
     this.name = name;
     this.id_tag = id_tag;
@@ -133,9 +133,10 @@ class Projection {
     this.description = this.getDescription(name);
     this.form_id_tag = id_tag + 'form';
     this.color_id_tag = id_tag + 'color';
-    this.line_dash = [0,0];
-    this.callback = callback;
-    this.generateForm();
+    this.line_dash = dash;
+    this.stroke_opacity = stroke_opacity;
+    this.fill_opacity = fill_opacity;
+    this.callback = "callback";
   }
 
   setLineDash(dash){
@@ -144,7 +145,7 @@ class Projection {
 
   getDescription(projection_name) {
     var description = '';
-    projections.forEach(function(p) {
+    projection_options.forEach(function(p) {
       if (p['name'] == projection_name) {
         description = p['description'];
       }
@@ -155,22 +156,22 @@ class Projection {
   generateForm() {
     const form = 
     `<form>
-      <select id=${this.form_id_tag}>${projections.map(p => {
+      <select id=${this.form_id_tag}>${projection_options.map(p => {
           return `<option textContent=${p.name} ${(this.name == p.name) ? 'selected' : ''}> ${p.name} </option>`;
       })}</select>
       <form>
       <input id=${this.color_id_tag} type="color" value="${this.color}"></input>
       <p>${this.description}</p>`
       ;
-    document.getElementById(this.id_tag).innerHTML = form;
-    document.getElementById(this.form_id_tag).addEventListener("change", (e) => this.updateProjection(e));
-    document.getElementById(this.color_id_tag).addEventListener("change", (e) => this.updateProjection(e))
+    // document.getElementById(this.id_tag).innerHTML = form;
+    // document.getElementById(this.form_id_tag).addEventListener("change", (e) => this.updateProjection(e));
+    // document.getElementById(this.color_id_tag).addEventListener("change", (e) => this.updateProjection(e))
   } 
 
   updateProjection(e) {
     var form = document.getElementById(this.form_id_tag);
     this.name = form.options[form.selectedIndex].text;
-    this.projection = projections[form.selectedIndex].value();
+    this.projection = projection_options[form.selectedIndex].value();
     this.description = this.getDescription(this.name);
     var color = document.getElementById(this.color_id_tag);
     this.color = color.value;
@@ -180,4 +181,5 @@ class Projection {
   }
 }
 
-export { projections, Projection };
+
+export { projection_options, Projection };

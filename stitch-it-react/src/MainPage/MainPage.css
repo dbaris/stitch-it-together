@@ -1,0 +1,150 @@
+html {
+    padding: none;
+  }
+  
+  body {
+    color: #658c5d;
+    text-align: center;
+    /* padding: 50px; */
+    
+    font: 14px "Elza", Helvetica, Arial, sans-serif;
+  }
+  
+  footer {
+    /* margin: 10px; */
+  }
+  
+  h1 {
+    font-family: "Gelica",'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: rgb(255,0,255);
+    text-align: left;
+  }
+  
+  h2 {
+    color: #2c3387;
+    font-family: "Gelica", 'Times New Roman', Times, serif;
+    text-align: left;
+  }
+  
+  h3 {
+    color: #658c5d;
+    /* font-family: "Gelica", 'Times New Roman', Times, serif; */
+    font-family: "variex", 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 36px;
+  }
+
+
+  
+  a {
+    color: #00B7FF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff00ff;
+  }
+  
+  #title {
+    z-index: 1;
+    position: absolute;
+    left: 2vw;
+    top: 2vh;
+    /* margin-left: 3vw; */
+  }
+  
+  #title-text {
+    display: absolute;
+    left: 2vw;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  #title-heading {
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
+    font-size: 24px;
+  }
+  
+  select {
+    background-color: white;
+    border-radius: 5px;
+    color: #658c5d;
+    border: 1px solid #658c5d;
+    /* padding: 5px; */
+    text-align: center;
+    font-family: "Elza Light", Helvetica, Arial, sans-serif;
+  }
+  
+  input {
+    background-color: white;
+    border-radius: 5px;
+    color: #658c5d;
+    border: 1px solid #658c5d;
+    width: 5vw;
+    padding: 6px;
+    margin-left: 100px;
+    margin-right: 10px; 
+  }
+  
+  .sources {
+    text-align: left;
+  }
+  
+  
+  .page-link:hover {
+    color: yellow;
+    cursor: grab;
+  }
+
+  .page-link {
+    color: #658c5d;
+    width: 20px;
+  }
+  
+  .projection-input {
+    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding: 10px;
+  }
+  
+  /* start  */
+  #left {
+    position: relative;
+    width: 35vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    float: left;
+  }
+  #right {
+    position: relative;
+    width: 65vw;
+    height: 100vh;
+    overflow: hidden;
+    float: left;
+  }
+
+  #map-projections {
+    width: 100%;
+    position: relative;
+  }
+  
+  #map-projection-text {
+    /* width: 100%; */
+    padding-right: 8%;
+    padding-left: 15%;
+    padding-top: 5vh;
+    position: relative;
+  }
+  /* end */
+  
+  #source-code {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vh;
+    z-index: 1;
+  }
+  
