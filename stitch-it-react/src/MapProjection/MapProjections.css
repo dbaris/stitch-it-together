@@ -1,0 +1,36 @@
+html {
+    padding: none;
+  }
+  
+  body {
+    color: #658c5d;
+    text-align: center;
+    /* padding: 50px; */
+    
+    font: 14px "Elza", Helvetica, Arial, sans-serif;
+  }
+
+  
+  .sources {
+    text-align: left;
+  }
+  
+
+  canvas {
+    /* padding-left: 0;
+    padding-right: 0; */
+    /* padding-top: 5vh; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: block;
+    position: relative;
+  }
+  .global-projections-canvas-container {
+    display: inline-block;
+  }
+
+  .graticule path {
+    fill: none;
+    stroke: #eee;
+  }
+  

@@ -28,12 +28,13 @@ function drawMap() {
             const world = topojson.topology({land: json});
             const land = topojson.feature(world, world.objects.land);
 
-            var width = 1200;
+            var width = 1600;
             var height = 0;
             function setMaxHeight(projection){
                 height = Math.max(height, fitWidth(projection.projection, width, land));
             }
             projections.forEach(setMaxHeight);
+            console.log("height: ", height)
 
             function resize(){
                 // proprotion to screen
@@ -42,7 +43,7 @@ function drawMap() {
                     height = height * .9;
                 }
             };
-            resize();
+            // resize();
             
             const canvas = document.getElementById('migration-canvas');
             const context = canvas.getContext("2d");
@@ -64,7 +65,6 @@ function drawMap() {
                 context.restore();
 
             }
-
             projections.forEach(render);
             context.restore();
 

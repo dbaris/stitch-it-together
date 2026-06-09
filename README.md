@@ -9,3 +9,10 @@ npm install
 cd StitchIt
 npm start
 ```
+
+## Using Nodemon for Fast Refresh during development
+
+```
+cd StitchIt
+nodemon --watch ./ --exec 'node bin/www' -e '*'
+```
